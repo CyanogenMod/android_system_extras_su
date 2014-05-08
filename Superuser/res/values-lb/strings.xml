@@ -16,17 +16,8 @@
      limitations under the License.
 -->
 <resources>
-  <string name="allow">允許</string>
-  <string name="remember_for">記住選擇 %s 分鐘</string>
-  <string name="remember_forever">永遠記住選擇</string>
-  <string name="settings">設定</string>
-  <string name="delete">刪除</string>
-  <string name="notifications">通知</string>
-  <string name="number_seconds">%s 秒</string>
-  <string name="notification">通知</string>
-  <string name="multiuser_user">所有使用者</string>
-  <string name="about">關於</string>
-  <string name="recovery_install">修復模式安裝</string>
-  <string name="theme">主題</string>
-  <string name="dark">深色</string>
+  <string name="superuser">Superuser</string>
+  <string name="allow">Erlaben</string>
+  <string name="unknown_uid">Onbekannte UID: %s</string>
+  <string name="application_request">%s freet no Superuser-Accès.</string>
 </resources>
