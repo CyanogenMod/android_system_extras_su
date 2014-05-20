@@ -15,7 +15,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Rendszergazda</string>
   <string name="allow">Engedélyez</string>
   <string name="deny">Megtagad</string>

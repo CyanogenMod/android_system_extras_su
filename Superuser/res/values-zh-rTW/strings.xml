@@ -15,7 +15,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">超級使用者</string>
   <string name="allow">允許</string>
   <string name="deny">拒絕</string>
@@ -39,19 +39,19 @@
   <string name="no_apps">目前沒有任何超級使用者應用程式的規則。</string>
   <string name="logging">紀錄</string>
   <string name="logging_summary">啟用所有超級使用者要求的紀錄。</string>
-  <string name="pin_protection">PIN 保護</string>
-  <string name="pin_protection_summary">要求輸入 PIN 以同意超級使用者要求</string>
+  <string name="pin_protection">PIN 碼保護</string>
+  <string name="pin_protection_summary">要求輸入 PIN 碼以同意超級使用者要求</string>
   <string name="request_timeout">要求逾時</string>
   <string name="request_timeout_summary">超級使用者要求會在 %s 秒後逾時並被拒絕</string>
   <string name="notifications">通知</string>
   <string name="none">無</string>
   <string name="notifications_summary">應用程式被授予或拒絕超級使用者權限時會顯示%s</string>
-  <string name="enter_pin">輸入 PIN</string>
-  <string name="enter_new_pin">輸入新的 PIN</string>
-  <string name="incorrect_pin">PIN 錯誤</string>
-  <string name="confirm_pin">確認 PIN</string>
-  <string name="pin_mismatch">PIN 不符</string>
-  <string name="pin_set">超級使用者 PIN 保護已啟用</string>
+  <string name="enter_pin">輸入 PIN 碼</string>
+  <string name="enter_new_pin">輸入新 PIN 碼</string>
+  <string name="incorrect_pin">PIN 碼錯誤</string>
+  <string name="confirm_pin">確認 PIN 碼</string>
+  <string name="pin_mismatch">PIN 碼不符</string>
+  <string name="pin_set">超級使用者 PIN 碼保護已啟用</string>
   <string name="number_seconds">%s 秒</string>
   <string name="superuser_granted">超級使用者授予了「%s」</string>
   <string name="superuser_denied">超級使用者拒絕了「%s」</string>
@@ -101,7 +101,7 @@
   <string name="theme">主題</string>
   <string name="light">淺色</string>
   <string name="dark">深色</string>
-  <string name="pin_disabled">超級使用者 PIN 保護已停用</string>
+  <string name="pin_disabled">超級使用者 PIN 碼保護已停用</string>
   <string name="revoke_permission">撤銷超級使用者權限</string>
   <string name="details">詳細資訊</string>
   <string name="db_delete_error">無法撤銷這個應用程式的超級使用者權限。\n請重新啟動超級使用者應用程式並再試一次。</string>

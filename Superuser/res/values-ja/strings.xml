@@ -15,14 +15,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">スーパーユーザー</string>
   <string name="allow">許可</string>
   <string name="deny">拒否</string>
   <string name="status_incoming">スーパーユーザーリクエストがありました\u2026</string>
   <string name="unknown_uid">不明なUID: %s</string>
   <string name="application_request">%sがスーパーユーザーアクセスをリクエストしています。</string>
-  <string name="info">警告: 心当たりのないリクエストは拒否した方がよいでしょう。</string>
+  <string name="info">警告: 心当たりのないリクエストは拒否することを推奨します。</string>
   <string name="request">スーパーユーザーリクエスト</string>
   <string name="package_header">パッケージ:</string>
   <string name="app_header">アプリ:</string>
@@ -37,7 +37,7 @@
   <string name="delete">削除</string>
   <string name="no_logs">ログはありません</string>
   <string name="no_apps">スーパーユーザーアプリのポリシーはありません。</string>
-  <string name="logging">ログを記録</string>
+  <string name="logging">ログ</string>
   <string name="logging_summary">すべてのスーパーユーザーリクエストのログを有効にする</string>
   <string name="pin_protection">PINによる保護</string>
   <string name="pin_protection_summary">スーパーユーザーリクエストの承認にPINの入力を要求する</string>

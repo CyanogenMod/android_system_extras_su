@@ -15,12 +15,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Superuser</string>
   <string name="allow">Permitir</string>
   <string name="deny">Negar</string>
   <string name="status_incoming">Pedido de entrada de Superuser\u2026</string>
-  <string name="unknown_uid">Desconhecido UID: %s</string>
+  <string name="unknown_uid">UID Desconhecido: %s</string>
   <string name="application_request">%s está a pedir acesso de Superuser.</string>
   <string name="info">Aviso: Se não iniciou esta ação, deve negar o pedido.</string>
   <string name="request">Pedido do Superuser</string>
@@ -33,8 +33,8 @@
   <string name="remember_forever">Lembrar esta escolha para sempre.</string>
   <string name="interactive">Interativo</string>
   <string name="logs">Registos</string>
-  <string name="settings">Configurações</string>
-  <string name="delete">Remover</string>
+  <string name="settings">Definições</string>
+  <string name="delete">Eliminar</string>
   <string name="no_logs">Sem Registos</string>
   <string name="no_apps">Atualmente não há aplicações com regras Superuser.</string>
   <string name="logging">Registo</string>
@@ -51,7 +51,7 @@
   <string name="incorrect_pin">PIN incorreto</string>
   <string name="confirm_pin">Confirme o PIN</string>
   <string name="pin_mismatch">O PIN não corresponde</string>
-  <string name="pin_set">Proteção com PIN activada</string>
+  <string name="pin_set">Proteção com PIN ativada</string>
   <string name="number_seconds">%s segundos</string>
   <string name="superuser_granted">Permissões de Superuser concedidas a %s</string>
   <string name="superuser_denied">Permissões de Superuser negadas a %s</string>
@@ -84,7 +84,7 @@
   <string name="installing">A instalar</string>
   <string name="installing_superuser">A instalar Superuser\u2026</string>
   <string name="install_superuser">Instalar Superuser</string>
-  <string name="install_superuser_info">O binário do Superuser (su) deve ser actualizado.\n\nPor favor escolha um método de instalação.\nA instalação em modo de recuperação é recomendada para dispositivos HTC.</string>
+  <string name="install_superuser_info">O binário do Superuser (su) deve ser atualizado.\n\nPor favor escolha um método de instalação.\nA instalação em modo de recuperação é recomendada para dispositivos HTC.</string>
   <string name="recovery_install">Instalação pelo modo de Recuperação</string>
   <string name="install">Instalar</string>
   <string name="checking_superuser">A verificar Superuser\u2026</string>

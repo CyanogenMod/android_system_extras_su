@@ -15,7 +15,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Superusuariu</string>
   <string name="allow">Permitir</string>
   <string name="deny">Refugar</string>
@@ -59,7 +59,7 @@
   <string name="notification">Notificación</string>
   <string name="no_notification">Nun va amosase nenguna notificación</string>
   <string name="developer_warning">Avisu al desendolcador:\nandroid.permission.ACCESS_SUPERUSER\nnon declaráu en manifest.</string>
-  <string name="superuser_description">acceso completu a toles funciones y almacenamientu del preséu</string>
+  <string name="superuser_description">accesu completu a toles funciones y almacenamientu del preséu</string>
   <string name="superuser_description_more">Superusuariu permite l\'accesu a toles funciones y almacenamientu del preséu, incluyendo los elementos de hardware seguros y sensibles del preséu. Esti permisu ye enforma peligrosu.</string>
   <string name="declared_permission">Permisu declaráu</string>
   <string name="declared_permission_summary">Namái permitir solicitúes d\'aplicaciones que declaren android.permission.ACCESS_SUPERUSER</string>

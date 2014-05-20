@@ -15,7 +15,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Yetkili kullanıcı</string>
   <string name="allow">İzin ver</string>
   <string name="deny">İzin verme</string>
@@ -32,7 +32,7 @@
   <string name="remember_for">Seçimi %s dakikalığına hatırla</string>
   <string name="remember_forever">Seçimi sonsuza kadar hatırla</string>
   <string name="interactive">Etkişimli</string>
-  <string name="logs">Kütükler</string>
+  <string name="logs">Günlükler</string>
   <string name="settings">Ayarlar</string>
   <string name="delete">Sil</string>
   <string name="no_logs">Kütük yok</string>
@@ -60,7 +60,7 @@
   <string name="no_notification">Hiçbir bildirim görüntülenmeyecek</string>
   <string name="developer_warning">Geliştirici Uyarısı:\nandroid.permission.ACCESS_SUPERUSER\nmanifest içinde ayarlanmamış.</string>
   <string name="superuser_description">tüm cihaz ve depolamaya sınırsız erişim</string>
-  <string name="superuser_description_more">Superuser cihazınızın güvenli ve hasas donanım bileşenleri dahil olmak üzere cihaz özelliklerine ve depolama alanlarına sınırsız bir yetkili kullanıcı erişimi sağlayacak. Bu erişimin tehlikeli olma potansiyeli var.</string>
+  <string name="superuser_description_more">Superuser cihazınızın güvenli ve hasas donanım bileşenleri dahil olmak üzere cihaz özelliklerine ve depolama alanlarına sınırsız bir yetkili kullanıcı erişimi sağlayacak. Bu erişim muhtemelen tehlikelidir.</string>
   <string name="declared_permission">Belirtilmiş İzin</string>
   <string name="declared_permission_summary">Sadece android.permission.ACCESS_SUPERUSER iznini belirtmiş uygulamalardan gelen taleplere izin ver</string>
   <string name="automatic_response">Otomatik Yanıtlama</string>
@@ -97,7 +97,7 @@
   <string name="adb_only">Sadece ADB</string>
   <string name="apps_and_adb">Uygulamalar ve ADB</string>
   <string name="whats_new">Neler Yeni?</string>
-  <string name="rate">Otla</string>
+  <string name="rate">Oyla</string>
   <string name="theme">Tema</string>
   <string name="light">Aydınlık</string>
   <string name="dark">Karanlık</string>
