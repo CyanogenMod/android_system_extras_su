@@ -16,14 +16,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="superuser">Superuser</string>
+  <string name="superuser">Superbruger</string>
   <string name="allow">Tillad</string>
   <string name="deny">Afvis</string>
   <string name="status_incoming">Indkommende Superuser-anmodning\u2026</string>
   <string name="unknown_uid">Ukendt UID: %s</string>
   <string name="application_request">%s anmoder om Superuser-rettigheder.</string>
   <string name="info">Advarsel: Hvis du ikke forstår dette, bør du afvise anmodningen.</string>
-  <string name="request">Superuser-anmodning</string>
+  <string name="request">Superbruger-anmodning</string>
   <string name="package_header">Pakke:</string>
   <string name="app_header">App:</string>
   <string name="uid_header">Anmodet UID:</string>
@@ -82,16 +82,16 @@
   <string name="about">Om</string>
   <string name="apps">Apps</string>
   <string name="installing">Installerer</string>
-  <string name="installing_superuser">Installerer Superuser\u2026</string>
-  <string name="install_superuser">Installer Superuser</string>
-  <string name="install_superuser_info">Superuser-binaryet (su) skal opdateres.\n\nVælg venligst en installationsmetode.\nInstallation gennem recovery anbefales til HTC-enheder.</string>
+  <string name="installing_superuser">Installerer Superbruger\u2026</string>
+  <string name="install_superuser">Installér Superbruger</string>
+  <string name="install_superuser_info">Superbruger-binaryet (su) skal opdateres.\n\nVælg venligst en installationsmetode.\nInstallation gennem recovery anbefales til HTC-enheder</string>
   <string name="recovery_install">Recovery-installering</string>
   <string name="install">Installer</string>
-  <string name="checking_superuser">Checker Superuser\u2026</string>
-  <string name="install_error">Der skete en fejl i installationen af Superuser. Send venligst en log af fejlen til udvikleren.</string>
-  <string name="install_success">Installationen af Superuser var sucessfuld.</string>
+  <string name="checking_superuser">Kontrollerer Superuser\u2026</string>
+  <string name="install_error">Der opstod en fejl i installationen af Superbruger. Send en log af fejlen til udvikleren.</string>
+  <string name="install_success">Installationen af Superbruger lykkedes.</string>
   <string name="su_binary_outdated">Superuser-binaryet er for gammelt.</string>
-  <string name="superuser_access">Superuser-adgang</string>
+  <string name="superuser_access">Superbruger-adgang</string>
   <string name="access_disabled">Slået fra</string>
   <string name="apps_only">Kun apps</string>
   <string name="adb_only">Kun ADB</string>
@@ -101,8 +101,8 @@
   <string name="theme">Tema</string>
   <string name="light">Lyst</string>
   <string name="dark">Mørkt</string>
-  <string name="pin_disabled">Superuser PIN-beskyttelse slået fra</string>
-  <string name="revoke_permission">Ophæv Superuser-tilladelsen</string>
+  <string name="pin_disabled">PIN-beskyttelse af superbruger slået fra</string>
+  <string name="revoke_permission">Ophæv Superbruger-tilladelsen</string>
   <string name="details">Detaljer</string>
-  <string name="db_delete_error">Superuser-tilladelsen kan ikke ophæves for denne app.\nGenstart Superuser-app\'en og prøv igen.</string>
+  <string name="db_delete_error">Superbruger-tilladelsen kan ikke ophæves for denne app.\nGenstart Superbruger-app\'en og prøv igen.</string>
 </resources>
