@@ -33,7 +33,7 @@
   <string name="remember_forever">Recorda l\'elecció per sempre</string>
   <string name="interactive">Interactiu</string>
   <string name="logs">Registres</string>
-  <string name="settings">Ajustaments</string>
+  <string name="settings">Configuració</string>
   <string name="delete">Esborra</string>
   <string name="no_logs">Sense Registres</string>
   <string name="no_apps">Actualment no hi ha polítiques d\'app de Superusuari.</string>

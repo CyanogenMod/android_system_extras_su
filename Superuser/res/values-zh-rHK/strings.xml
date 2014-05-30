@@ -38,14 +38,14 @@
   <string name="no_logs">沒有記錄</string>
   <string name="no_apps">沒有任何超級使用者應用程式的規則。</string>
   <string name="logging">記錄</string>
-  <string name="logging_summary">啟用所有超級使用者的請求記錄。</string>
+  <string name="logging_summary">啟用記錄所有超級使用者的請求。</string>
   <string name="pin_protection">PIN 碼保護</string>
   <string name="pin_protection_summary">要求輸入 PIN 碼以批准超級使用者的請求。</string>
   <string name="request_timeout">請求逾時</string>
   <string name="request_timeout_summary">超級使用者請求會在 %s 秒後逾時並被拒絕</string>
   <string name="notifications">通知</string>
   <string name="none">無</string>
-  <string name="notifications_summary">當應用程式獲得或被拒絕超級使用者權限後，會顯示%s。</string>
+  <string name="notifications_summary">當應用程式被批准或拒絕獲得超級使用者權限後，會顯示%s。</string>
   <string name="enter_pin">輸入 PIN 碼</string>
   <string name="enter_new_pin">輸入新的 PIN 碼</string>
   <string name="incorrect_pin">PIN 碼不正確</string>
@@ -60,9 +60,9 @@
   <string name="no_notification">不會顯示通知</string>
   <string name="developer_warning">開發者警告：\n還沒有在 manifest 宣告\nandroid.permission.ACCESS_SUPERUSER</string>
   <string name="superuser_description">對所有裝置功能和儲存空間的完全權限</string>
-  <string name="superuser_description_more">超級使用者獲得所有裝置功能和儲存空間的訪問權限，包括裝置安全和敏感的硬件元素。這個權限是有潛在風險。</string>
+  <string name="superuser_description_more">超級使用者獲得所有裝置功能和儲存空間的訪問權限，包括裝置安全和敏感的硬件元素。這個權限有潛在風險。</string>
   <string name="declared_permission">宣告權限</string>
-  <string name="declared_permission_summary">只允許已宣告 android.permission.ACCESS_SUPERUSER 權限的應用程序。</string>
+  <string name="declared_permission_summary">只允許已宣告 android.permission.ACCESS_SUPERUSER 權限的應用程式。</string>
   <string name="automatic_response">自動回應</string>
   <string name="prompt">提示</string>
   <string name="automatic_response_allow_summary">自動允許新請求。</string>
@@ -71,7 +71,7 @@
   <string name="security">安全性</string>
   <string name="multiuser_policy">多使用者規則</string>
   <string name="multiuser_owner_only_summary">只允許裝置擁有者要求超級使用者。</string>
-  <string name="multiuser_owner_managed_summary">當其他使用者請求超級使用者時，裝置擁有者會被提示。</string>
+  <string name="multiuser_owner_managed_summary">當其他使用者請求超級使用者時提示裝置擁有者。</string>
   <string name="multiuser_user_summary">所有使用者都能夠請求超級使用者。</string>
   <string name="multiuser_owner_only">僅擁有者</string>
   <string name="multiuser_owner_managed">擁有者管理</string>
@@ -85,7 +85,7 @@
   <string name="installing_superuser">正在安裝超級使用者...</string>
   <string name="install_superuser">安裝超級使用者</string>
   <string name="install_superuser_info">超級使用者的二進制檔案 (su) 一定要更新。\n\n請選擇安裝方法。\nHTC 裝置建議選擇修復模式 (Recovery) 的安裝方法。</string>
-  <string name="recovery_install">修復模式安裝</string>
+  <string name="recovery_install">透過修復模式安裝</string>
   <string name="install">安裝</string>
   <string name="checking_superuser">正在檢查超級使用者...</string>
   <string name="install_error">安裝超級使用者時發生了一個錯誤。請將錯誤記錄傳送至開發者。</string>
@@ -104,5 +104,5 @@
   <string name="pin_disabled">超級使用者 PIN 碼保護已停用</string>
   <string name="revoke_permission">撤銷超級使用者權限</string>
   <string name="details">詳情</string>
-  <string name="db_delete_error">超級使用者的權限不能從這個程序撤銷，\n請重新啟動超級使用者並重試。</string>
+  <string name="db_delete_error">超級使用者權限無法從這個應用程式撤銷，\n請重新啟動超級使用者並重試。</string>
 </resources>

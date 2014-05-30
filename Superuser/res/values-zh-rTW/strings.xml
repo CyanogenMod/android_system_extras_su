@@ -38,7 +38,7 @@
   <string name="no_logs">沒有紀錄</string>
   <string name="no_apps">目前沒有任何超級使用者應用程式的規則。</string>
   <string name="logging">紀錄</string>
-  <string name="logging_summary">啟用所有超級使用者要求的紀錄。</string>
+  <string name="logging_summary">啟用記錄所有超級使用者的請求。</string>
   <string name="pin_protection">PIN 碼保護</string>
   <string name="pin_protection_summary">要求輸入 PIN 碼以同意超級使用者要求</string>
   <string name="request_timeout">要求逾時</string>

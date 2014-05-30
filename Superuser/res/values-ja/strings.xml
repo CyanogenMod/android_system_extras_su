@@ -22,7 +22,7 @@
   <string name="status_incoming">スーパーユーザーリクエストがありました\u2026</string>
   <string name="unknown_uid">不明なUID: %s</string>
   <string name="application_request">%sがスーパーユーザーアクセスをリクエストしています。</string>
-  <string name="info">警告: 心当たりのないリクエストは拒否することを推奨します。</string>
+  <string name="info">警告: 心当たりのないリクエストは許可しないことを推奨します。</string>
   <string name="request">スーパーユーザーリクエスト</string>
   <string name="package_header">パッケージ:</string>
   <string name="app_header">アプリ:</string>
