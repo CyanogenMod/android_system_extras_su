@@ -20,7 +20,7 @@
   <string name="allow">Izinkan</string>
   <string name="deny">Tolak</string>
   <string name="status_incoming">Permintaan Superuser Masuk\u2026</string>
-  <string name="unknown_uid">UID tidak diketahui: %s</string>
+  <string name="unknown_uid">UID Tidak Dikenal: %s</string>
   <string name="application_request">%s meminta akses Superuser.</string>
   <string name="info">Peringatan: Jika anda tidak memahami ini, sebaiknya anda menolak permintaan ini.</string>
   <string name="request">Permintaan Superuser</string>

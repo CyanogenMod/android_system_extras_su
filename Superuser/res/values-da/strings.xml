@@ -76,7 +76,7 @@
   <string name="multiuser_owner_only">Kun ejer</string>
   <string name="multiuser_owner_managed">Ejer-styret</string>
   <string name="multiuser_user">Alle brugere</string>
-  <string name="multiuser_require_owner">Multibruger-politikken kan kun styres af enhends-ejeren.</string>
+  <string name="multiuser_require_owner">Multibruger-politikken kan kun styres af ejeren af enheden.</string>
   <string name="owner_login_info">Skift venligst til ejer-kontoen for at bekræfte eller afvise denne anmodning.</string>
   <string name="all_commands">Alle kommandoer</string>
   <string name="about">Om</string>
@@ -84,13 +84,13 @@
   <string name="installing">Installerer</string>
   <string name="installing_superuser">Installerer Superbruger\u2026</string>
   <string name="install_superuser">Installér Superbruger</string>
-  <string name="install_superuser_info">Superbruger-binaryet (su) skal opdateres.\n\nVælg venligst en installationsmetode.\nInstallation gennem recovery anbefales til HTC-enheder</string>
+  <string name="install_superuser_info">Den binære Superbruger-fil (su) skal opdateres.\n\nVælg venligst en installationsmetode.\nInstallation via Recovery anbefales til HTC-enheder.</string>
   <string name="recovery_install">Recovery-installering</string>
   <string name="install">Installer</string>
   <string name="checking_superuser">Kontrollerer Superuser\u2026</string>
   <string name="install_error">Der opstod en fejl i installationen af Superbruger. Send en log af fejlen til udvikleren.</string>
   <string name="install_success">Installationen af Superbruger lykkedes.</string>
-  <string name="su_binary_outdated">Superuser-binaryet er for gammelt.</string>
+  <string name="su_binary_outdated">Den binære Superbruger-fil er forældet.</string>
   <string name="superuser_access">Superbruger-adgang</string>
   <string name="access_disabled">Slået fra</string>
   <string name="apps_only">Kun apps</string>

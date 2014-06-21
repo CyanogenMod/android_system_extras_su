@@ -35,10 +35,10 @@
   <string name="logs">Günlükler</string>
   <string name="settings">Ayarlar</string>
   <string name="delete">Sil</string>
-  <string name="no_logs">Kütük yok</string>
+  <string name="no_logs">Günlük yok</string>
   <string name="no_apps">Şu anda bir yetkili kullanıcı uygulama politikası yok.</string>
-  <string name="logging">Kütükleme</string>
-  <string name="logging_summary">Yetkili kullanıcı isteklerini kütüğe yazmayı etkinleştirin/devre dışı bırakın</string>
+  <string name="logging">Günlükleme</string>
+  <string name="logging_summary">Yetkili kullanıcı isteklerini günlüğe yazmayı etkinleştirin/devre dışı bırakın</string>
   <string name="pin_protection">PIN Koruması</string>
   <string name="pin_protection_summary">Yetkili kullanıcı isteklerini onaylarken bir PIN girilmesini gerekli kılın</string>
   <string name="request_timeout">İstek Zaman Aşımı</string>
