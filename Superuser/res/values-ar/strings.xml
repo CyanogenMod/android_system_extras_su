@@ -29,7 +29,7 @@
   <string name="uid_header">طلب UID:</string>
   <string name="command_header">الأمر:</string>
   <string name="this_time_only">هذه المرة فقط</string>
-  <string name="remember_for">تذكر الاختيار لي %s دقائة</string>
+  <string name="remember_for">تذكر الاختيار لـ %s دقائق</string>
   <string name="remember_forever">تذكر الخيار إلى الأبد</string>
   <string name="interactive">التفاعلية</string>
   <string name="logs">سجلات</string>
