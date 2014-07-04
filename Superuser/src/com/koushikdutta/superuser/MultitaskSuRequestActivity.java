@@ -269,7 +269,7 @@ public class MultitaskSuRequestActivity extends FragmentActivity {
 
         new Runnable() {
             public void run() {
-                mAllow.setText(getString(R.string.allow) + " (" + mTimeLeft + ")");
+                mAllow.setText(getString(R.string.allow_countdown, mTimeLeft));
                 if (mTimeLeft-- <= 0) {
                     mAllow.setText(getString(R.string.allow));
                     if (!mHandled)
