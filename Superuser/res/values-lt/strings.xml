@@ -18,6 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Superuser</string>
   <string name="allow">Leisti</string>
+  <string name="allow_countdown">Leisti (%1$s)</string>
   <string name="deny">Atmesti</string>
   <string name="status_incoming">„Superuser“ užklausa\u2026</string>
   <string name="unknown_uid">Nežinomas UID: %s</string>

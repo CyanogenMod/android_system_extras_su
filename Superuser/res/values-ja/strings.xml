@@ -18,6 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">スーパーユーザー</string>
   <string name="allow">許可</string>
+  <string name="allow_countdown">許可（%1$s）</string>
   <string name="deny">拒否</string>
   <string name="status_incoming">スーパーユーザーリクエストがありました\u2026</string>
   <string name="unknown_uid">不明なUID: %s</string>
@@ -45,7 +46,7 @@
   <string name="request_timeout_summary">スーパーユーザーリクエストは%s秒でタイムアウトして拒否されます</string>
   <string name="notifications">通知</string>
   <string name="none">なし</string>
-  <string name="notifications_summary">アプリにスーパーユーザー権限が許可または拒否された際に%sを表示する</string>
+  <string name="notifications_summary">スーパーユーザー権限がアプリに許可または拒否されたときに%sを表示する</string>
   <string name="enter_pin">PINを入力</string>
   <string name="enter_new_pin">新しいPINを入力</string>
   <string name="incorrect_pin">PINが正しくありません</string>
@@ -71,7 +72,7 @@
   <string name="security">セキュリティ</string>
   <string name="multiuser_policy">マルチユーザーポリシー</string>
   <string name="multiuser_owner_only_summary">端末の所有者のみスーパーユーザーをリクエストできます</string>
-  <string name="multiuser_owner_managed_summary">他のユーザーがスーパーユーザーをリクエストした際に端末の所有者にプロンプトで確認する</string>
+  <string name="multiuser_owner_managed_summary">他のユーザーがスーパーユーザーをリクエストしたときに端末の所有者にプロンプトで確認する</string>
   <string name="multiuser_user_summary">すべてのユーザーがスーパーユーザーをリクエストできます</string>
   <string name="multiuser_owner_only">所有者のみ</string>
   <string name="multiuser_owner_managed">所有者が管理しています</string>
@@ -104,5 +105,5 @@
   <string name="pin_disabled">スーパーユーザーのPINによる保護は無効</string>
   <string name="revoke_permission">スーパーユーザー権限を取り消す</string>
   <string name="details">詳細情報</string>
-  <string name="db_delete_error">このアプリからスーパーユーザー権限を取り消すことができませんでした。\nスーパーユーザーアプリを再起動して、もう一度やり直してください。</string>
+  <string name="db_delete_error">このアプリからスーパーユーザー権限を取り消すことができませんでした。\nスーパーユーザーアプリを再起動して、もう一度お試しください。</string>
 </resources>

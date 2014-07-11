@@ -18,6 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">משתמש על</string>
   <string name="allow">אפשר</string>
+  <string name="allow_countdown">אפשר (%1$s)</string>
   <string name="deny">דחה</string>
   <string name="status_incoming">בקשת Superuser נכנסת...</string>
   <string name="unknown_uid">לא ידוע UID: %s</string>

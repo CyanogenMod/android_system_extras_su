@@ -18,6 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">슈퍼유저</string>
   <string name="allow">허가</string>
+  <string name="allow_countdown">허가 (%1$s)</string>
   <string name="deny">취소</string>
   <string name="status_incoming">슈퍼유저 권한 요청 중...</string>
   <string name="unknown_uid">알수없는 UID: %s</string>
@@ -58,7 +59,7 @@
   <string name="toast">팝업</string>
   <string name="notification">알림</string>
   <string name="no_notification">알림이 표시되지 않습니다.</string>
-  <string name="developer_warning">개발자 경고:\nandroid.permission.ACCESS_SUPERUSER\nnot declared in manifest.</string>
+  <string name="developer_warning">개발자 경고:\nandroid.permission.ACCESS_SUPERUSER가\n매니페스트에 정의되지 않았습니다.</string>
   <string name="superuser_description">장치 기능 및 저장소에 대한 모든 권한</string>
   <string name="superuser_description_more">슈퍼유저는 장치의 하드웨어 구성 요소를 포함하여 모든 장치 기능과 스토리지에 대한 전체 액세스 권한을 부여합니다. 이 권한은 위험합니다.</string>
   <string name="declared_permission">선언 허가</string>
