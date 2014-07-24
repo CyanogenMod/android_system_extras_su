@@ -18,6 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">سوپه‌ر یوزه‌ر</string>
   <string name="allow">ڕێگه‌دان</string>
+  <string name="allow_countdown">ڕێگەدان بە (%1$s)</string>
   <string name="deny">نکوڵی</string>
   <string name="status_incoming">داوای هێنانی سوپه‌ریوزه‌ر\u2026</string>
   <string name="unknown_uid">نه‌ناسراو UID: %s</string>

@@ -18,6 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">สิทธิผู้ดูแลระบบ</string>
   <string name="allow">อนุญาต</string>
+  <string name="allow_countdown">อนุญาต (%1$s)</string>
   <string name="deny">ปฏิเสธ</string>
   <string name="status_incoming">มีการร้องขอสิทธิ\u2026</string>
   <string name="unknown_uid">ไม่ทราบ UID: %s</string>

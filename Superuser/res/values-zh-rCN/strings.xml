@@ -26,7 +26,7 @@
   <string name="info">警告：如果你对此不了解，你应该选拒绝。</string>
   <string name="request">超级用户请求</string>
   <string name="package_header">软件包：</string>
-  <string name="app_header">应用程序：</string>
+  <string name="app_header">应用：</string>
   <string name="uid_header">请求的 UID：</string>
   <string name="command_header">命令：</string>
   <string name="this_time_only">仅此次</string>
@@ -37,7 +37,7 @@
   <string name="settings">设置</string>
   <string name="delete">删除</string>
   <string name="no_logs">无日志</string>
-  <string name="no_apps">当前没有超级用户应用程序策略。</string>
+  <string name="no_apps">当前没有超级用户应用策略。</string>
   <string name="logging">日志</string>
   <string name="logging_summary">启用/禁用超级用户请求日志</string>
   <string name="pin_protection">密码保护</string>
@@ -46,7 +46,7 @@
   <string name="request_timeout_summary">%s 秒后超级用户请求将超时并被拒绝</string>
   <string name="notifications">通知</string>
   <string name="none">无</string>
-  <string name="notifications_summary">当应用程序被允许或拒绝时将显示一个%s</string>
+  <string name="notifications_summary">当应用被允许或拒绝时将显示一个%s</string>
   <string name="enter_pin">输入密码</string>
   <string name="enter_new_pin">输入新的密码</string>
   <string name="incorrect_pin">密码不正确</string>
@@ -64,7 +64,7 @@
   <string name="superuser_description">对所有设备功能和存储的完整权限</string>
   <string name="superuser_description_more">超级用户授予访问你的设备的所有功能和存储设备的完整权限，包括加密和敏感硬件设备。此权限有潜在的风险。</string>
   <string name="declared_permission">权限申明</string>
-  <string name="declared_permission_summary">仅允许来自申明了 android.permission.ACCESS_SUPERUSER 权限的应用程序的请求</string>
+  <string name="declared_permission_summary">仅允许来自申明了 android.permission.ACCESS_SUPERUSER 权限的应用的请求</string>
   <string name="automatic_response">自动响应</string>
   <string name="prompt">提示</string>
   <string name="automatic_response_allow_summary">自动允许新请求</string>
@@ -82,7 +82,7 @@
   <string name="owner_login_info">请切换到机主帐户允许或拒绝此请求。</string>
   <string name="all_commands">所有命令</string>
   <string name="about">关于</string>
-  <string name="apps">应用程序</string>
+  <string name="apps">应用</string>
   <string name="installing">正在安装</string>
   <string name="installing_superuser">正在安装超级用户\u2026</string>
   <string name="install_superuser">安装超级用户</string>
@@ -95,9 +95,9 @@
   <string name="su_binary_outdated">su 二进制可执行文件已过旧。</string>
   <string name="superuser_access">超级用户访问权限</string>
   <string name="access_disabled">禁用</string>
-  <string name="apps_only">仅限于应用程序</string>
+  <string name="apps_only">仅限于应用</string>
   <string name="adb_only">仅限于 ADB</string>
-  <string name="apps_and_adb">应用程序和 ADB</string>
+  <string name="apps_and_adb">应用和 ADB</string>
   <string name="whats_new">更新说明</string>
   <string name="rate">评价</string>
   <string name="theme">界面主题</string>

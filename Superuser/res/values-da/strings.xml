@@ -18,6 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Superbruger</string>
   <string name="allow">Tillad</string>
+  <string name="allow_countdown">Tillad (%1$s)</string>
   <string name="deny">Afvis</string>
   <string name="status_incoming">Indkommende Superuser-anmodning\u2026</string>
   <string name="unknown_uid">Ukendt UID: %s</string>

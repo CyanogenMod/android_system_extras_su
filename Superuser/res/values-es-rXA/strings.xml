@@ -18,6 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Superusuariu</string>
   <string name="allow">Permitir</string>
+  <string name="allow_countdown">Permitío (%1$s)</string>
   <string name="deny">Refugar</string>
   <string name="status_incoming">Solicitú de Superusuariu\u2026</string>
   <string name="unknown_uid">UID desconocíu: %s</string>
