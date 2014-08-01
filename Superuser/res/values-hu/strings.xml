@@ -33,7 +33,7 @@
   <string name="remember_for">Emlékezzen a válaszra %s percig</string>
   <string name="remember_forever">Válasz megjegyzése örökre</string>
   <string name="interactive">Interaktív</string>
-  <string name="logs">Napló</string>
+  <string name="logs">Naplók</string>
   <string name="settings">Beállítások</string>
   <string name="delete">Törlés</string>
   <string name="no_logs">Nincs napló bejegyzés</string>
@@ -56,7 +56,7 @@
   <string name="number_seconds">%s másodperc</string>
   <string name="superuser_granted">%s rendszergazdai jogot kapott</string>
   <string name="superuser_denied">%s rendszergazdai jog kérése megtagadva</string>
-  <string name="toast">Felugró ablak</string>
+  <string name="toast">Buborékszöveg</string>
   <string name="notification">Figyelmeztetés</string>
   <string name="no_notification">Nem jelennek meg az értesítések</string>
   <string name="developer_warning">Fejlesztői figyelmeztetés:\nandroid.permission.ACCESS_SUPERUSER\nnincs deklarálva a manifest fájlban.</string>
@@ -98,11 +98,11 @@
   <string name="adb_only">Csak ADB</string>
   <string name="apps_and_adb">Alkalmazások és ADB</string>
   <string name="whats_new">Újdonságok</string>
-  <string name="rate">Szavazás</string>
+  <string name="rate">Értékelje</string>
   <string name="theme">Téma</string>
   <string name="light">Világos</string>
   <string name="dark">Sötét</string>
-  <string name="pin_disabled">PIN-kód használat letiltva</string>
+  <string name="pin_disabled">PIN-kód védelem letiltva</string>
   <string name="revoke_permission">Rendszeradminisztrátori engedély visszavonása</string>
   <string name="details">Részletek</string>
   <string name="db_delete_error">Az adminisztrátori jog nem vonható vissza ettől az alkalmazástól.\nIndítsa újra a Superuser alkalmazást és próbálja újra.</string>
