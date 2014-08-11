@@ -2,8 +2,8 @@
 <resources>
 
     <string name="superuser">超級使用者</string>
-    <string name="allow">允許</string>
-    <string name="deny">拒絕</string>
+    <string name="su_allow">允許</string>
+    <string name="su_deny">拒絕</string>
     <string name="status_incoming">傳入超級使用者的請求...</string>
     <string name="unknown_uid">未知 UID: %s</string>
     <string name="application_request">「%s」正要求超級使用者權限</string>

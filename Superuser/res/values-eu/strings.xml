@@ -17,9 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Supererabiltzailea</string>
-  <string name="allow">Baimendu</string>
-  <string name="allow_countdown">Baimendu (%1$s)</string>
-  <string name="deny">Ukatu</string>
+  <string name="su_allow">Baimendu</string>
+  <string name="su_allow_countdown">Baimendu (%1$s)</string>
+  <string name="su_deny">Ukatu</string>
   <string name="status_incoming">Supererabiltzaile eskaera\u2026</string>
   <string name="unknown_uid">UID ezezaguna: %s</string>
   <string name="application_request">%s-ek Supererabiltzaile sarbidea eskatzen ari da.</string>

@@ -17,9 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Yetkili kullanıcı</string>
-  <string name="allow">İzin ver</string>
-  <string name="allow_countdown">İzin ver (%1$s)</string>
-  <string name="deny">İzin verme</string>
+  <string name="su_allow">İzin ver</string>
+  <string name="su_allow_countdown">İzin ver (%1$s)</string>
+  <string name="su_deny">İzin verme</string>
   <string name="status_incoming">Gelen yetkili kullanıcı isteği\u2026</string>
   <string name="unknown_uid">Bilinmeyen UID: %s</string>
   <string name="application_request">%s yetkili kullanıcı erişimi istiyor.</string>

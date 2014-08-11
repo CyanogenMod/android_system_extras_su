@@ -17,9 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Superuser</string>
-  <string name="allow">Permiteți</string>
-  <string name="allow_countdown">Permite (%1$s)</string>
-  <string name="deny">Refuzați</string>
+  <string name="su_allow">Permiteți</string>
+  <string name="su_allow_countdown">Permite (%1$s)</string>
+  <string name="su_deny">Refuzați</string>
   <string name="status_incoming">Cerere superuser de intrare\u2026</string>
   <string name="unknown_uid">UID necunoscut: %s</string>
   <string name="application_request">%s cere acces Superuser.</string>

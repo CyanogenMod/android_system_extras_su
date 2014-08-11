@@ -35,10 +35,10 @@ public class UidPolicy extends UidCommand {
 
     public int getPolicyResource() {
         if (ALLOW.equals(policy))
-            return R.string.allow;
+            return R.string.su_allow;
         else if (INTERACTIVE.equals(policy))
             return R.string.interactive;
-        return R.string.deny;
+        return R.string.su_deny;
     }
 
     public String getPolicy() {

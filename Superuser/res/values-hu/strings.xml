@@ -17,9 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Rendszergazda</string>
-  <string name="allow">Engedélyez</string>
-  <string name="allow_countdown">Engedélyez (%1$s)</string>
-  <string name="deny">Megtagad</string>
+  <string name="su_allow">Engedélyez</string>
+  <string name="su_allow_countdown">Engedélyez (%1$s)</string>
+  <string name="su_deny">Megtagad</string>
   <string name="status_incoming">Rendszergazdai jog kérése\u2026</string>
   <string name="unknown_uid">Ismeretlen UID: %s</string>
   <string name="application_request">%s rendszergazdai jogokat kér.</string>

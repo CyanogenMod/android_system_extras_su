@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Superuser</string>
-  <string name="allow">Erlaben</string>
+  <string name="su_allow">Erlaben</string>
   <string name="unknown_uid">Onbekannte UID: %s</string>
   <string name="application_request">%s freet no Superuser-Accès.</string>
 </resources>

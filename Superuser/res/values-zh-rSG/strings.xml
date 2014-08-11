@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="superuser">超级用户</string>
-    <string name="allow">允许</string>
-    <string name="deny">拒绝</string>
+    <string name="su_allow">允许</string>
+    <string name="su_deny">拒绝</string>
     <string name="status_incoming">收到超级用户请求…</string>
     <string name="unknown_uid">未知 UID：%s</string>
     <string name="application_request">%s 正在请求超级用户访问权限。</string>

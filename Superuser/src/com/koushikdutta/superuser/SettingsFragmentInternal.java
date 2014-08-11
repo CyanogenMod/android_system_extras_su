@@ -279,7 +279,7 @@ public class SettingsFragmentInternal extends BetterListFragmentInternal {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle(R.string.automatic_response);
-                String[] items = new String[] { getString(R.string.prompt), getString(R.string.deny), getString(R.string.allow) };
+                String[] items = new String[] { getString(R.string.prompt), getString(R.string.su_deny), getString(R.string.su_allow) };
                 builder.setItems(items, new OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

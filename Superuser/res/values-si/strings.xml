@@ -17,9 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">සුපිරි පරිශීලක</string>
-  <string name="allow">අනුමත කරන්න</string>
-  <string name="allow_countdown">අනුමත කරන්න (%1$s)</string>
-  <string name="deny">ප්‍රතික්ෂේප කරන්න</string>
+  <string name="su_allow">අනුමත කරන්න</string>
+  <string name="su_allow_countdown">අනුමත කරන්න (%1$s)</string>
+  <string name="su_deny">ප්‍රතික්ෂේප කරන්න</string>
   <string name="status_incoming">පැමිණෙන සුපිරි පරිශීලක ඉල්ලීම\u2026</string>
   <string name="unknown_uid">නාඳුනන UID: %s</string>
   <string name="application_request">%s සුපිරි පරිශීලක පිවිසුම ඉල්ලුම් කරයි.</string>

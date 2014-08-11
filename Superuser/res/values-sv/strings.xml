@@ -17,9 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Superuser</string>
-  <string name="allow">Tillåt</string>
-  <string name="allow_countdown">Tillåt (%1$s)</string>
-  <string name="deny">Neka</string>
+  <string name="su_allow">Tillåt</string>
+  <string name="su_allow_countdown">Tillåt (%1$s)</string>
+  <string name="su_deny">Neka</string>
   <string name="status_incoming">Inkommande Superuserbegäran\u2026</string>
   <string name="unknown_uid">Okänt UID: %s</string>
   <string name="application_request">%s begär Superuseråtkomst.</string>

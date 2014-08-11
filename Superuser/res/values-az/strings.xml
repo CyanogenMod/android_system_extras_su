@@ -17,8 +17,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Super İstifadәçi</string>
-  <string name="allow">İcazə</string>
-  <string name="deny">Qadağa</string>
+  <string name="su_allow">İcazə</string>
+  <string name="su_deny">Qadağa</string>
   <string name="status_incoming">Daxil olan super istifadәçi sorğusu\u2026</string>
   <string name="unknown_uid">Namәlum UİD: %s</string>
   <string name="application_request">%s super istifadәçi keçidini tәlәb elәyir.</string>

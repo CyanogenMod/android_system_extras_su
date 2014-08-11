@@ -120,7 +120,7 @@
             android:layout_weight="1"
             android:enabled="false"
             android:filterTouchesWhenObscured="true"
-            android:text="@string/allow" />
+            android:text="@string/su_allow" />
     </LinearLayout>
 
 

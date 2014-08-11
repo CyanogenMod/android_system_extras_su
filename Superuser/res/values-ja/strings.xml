@@ -17,9 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">スーパーユーザー</string>
-  <string name="allow">許可</string>
-  <string name="allow_countdown">許可（%1$s）</string>
-  <string name="deny">拒否</string>
+  <string name="su_allow">許可</string>
+  <string name="su_allow_countdown">許可（%1$s）</string>
+  <string name="su_deny">拒否</string>
   <string name="status_incoming">スーパーユーザーリクエストが来ています\u2026</string>
   <string name="unknown_uid">不明なUID: %s</string>
   <string name="application_request">%sがスーパーユーザーアクセスをリクエストしています。</string>
