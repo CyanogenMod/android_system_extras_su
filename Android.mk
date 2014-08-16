@@ -17,7 +17,7 @@ LOCAL_PATH := $(my_path)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := su
-LOCAL_MODULE_TAGS := eng debug optional
+LOCAL_MODULE_TAGS := optional
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 LOCAL_STATIC_LIBRARIES := libc libcutils
 LOCAL_C_INCLUDES := external/sqlite/dist
@@ -42,8 +42,6 @@ $(SYMLINKS):
 	@mkdir -p $(dir $@)
 	@rm -rf $@
 	$(hide) ln -sf ../xbin/su $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(SYMLINKS)
 
 # We need this so that the installed files could be picked up based on the
 # local module name
