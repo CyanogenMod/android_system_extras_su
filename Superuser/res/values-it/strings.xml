@@ -26,7 +26,7 @@
   <string name="info">Attenzione: se non comprendi cosa significhi dovresti negare l\'accesso.</string>
   <string name="request">Richiesta Superuser</string>
   <string name="package_header">Pacchetto:</string>
-  <string name="app_header">Applicazione:</string>
+  <string name="app_header">App:</string>
   <string name="uid_header">UID Richiesto:</string>
   <string name="command_header">Comando:</string>
   <string name="this_time_only">Solo per questa volta</string>
@@ -37,7 +37,7 @@
   <string name="settings">Impostazioni</string>
   <string name="delete">Cancella</string>
   <string name="no_logs">Nessun log</string>
-  <string name="no_apps">Nessuna App gestita da Superuser.</string>
+  <string name="no_apps">Nessuna app gestita da Superuser.</string>
   <string name="logging">Registrazione log</string>
   <string name="logging_summary">Attiva o disattiva tutte le richieste di log da parte di Superuser</string>
   <string name="pin_protection">Protezione con PIN</string>
@@ -81,7 +81,7 @@
   <string name="owner_login_info">E\' necessario utilizzare l\'utente proprietario per approvare o negare questa richiesta.</string>
   <string name="all_commands">Tutti i comandi</string>
   <string name="about">Info</string>
-  <string name="apps">Applicazioni</string>
+  <string name="apps">App</string>
   <string name="installing">Installazione</string>
   <string name="installing_superuser">Sto installando Superuser\u2026</string>
   <string name="install_superuser">Installa Superuser</string>
@@ -94,9 +94,9 @@
   <string name="su_binary_outdated">Il file binario su è obsoleto.</string>
   <string name="superuser_access">Accesso a Superuser</string>
   <string name="access_disabled">Disattivato</string>
-  <string name="apps_only">Solo Applicazioni</string>
+  <string name="apps_only">Solo app</string>
   <string name="adb_only">Solo ADB</string>
-  <string name="apps_and_adb">Applicazioni ed ADB</string>
+  <string name="apps_and_adb">App e ADB</string>
   <string name="whats_new">Novità</string>
   <string name="rate">Valuta</string>
   <string name="theme">Tema</string>
@@ -105,5 +105,5 @@
   <string name="pin_disabled">Protezione di Superuser con PIN disattivata</string>
   <string name="revoke_permission">Revoca permesso Superuser</string>
   <string name="details">Dettagli</string>
-  <string name="db_delete_error">Il permesso Superuser non può essere revocato da questa applicazione. Si prega di riavviare l\'applicazione Superuser e riprovare.</string>
+  <string name="db_delete_error">Il permesso Superuser non può essere revocato da questa app. Si prega di riavviare l\'app Superuser e riprovare.</string>
 </resources>
