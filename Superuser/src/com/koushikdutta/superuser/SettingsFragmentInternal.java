@@ -351,10 +351,12 @@ public class SettingsFragmentInternal extends BetterListFragmentInternal {
                     setSummary(getString(R.string.no_notification));
                     break;
                 case Settings.NOTIFICATION_TYPE_NOTIFICATION:
-                    setSummary(getString(R.string.notifications_summary, getString(R.string.notification)));
+                    setSummary(getString(R.string.notifications_summary,
+                            getString(R.string.notification_summary)));
                     break;
                 case Settings.NOTIFICATION_TYPE_TOAST:
-                    setSummary(getString(R.string.notifications_summary, getString(R.string.toast)));
+                    setSummary(getString(R.string.notifications_summary,
+                            getString(R.string.toast_summary)));
                     break;
                 }
             }

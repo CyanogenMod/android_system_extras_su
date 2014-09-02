@@ -45,7 +45,12 @@
     <string name="request_timeout_summary">Superuser requests will time out and be denied after %s seconds</string>
     <string name="notifications">Notifications</string>
     <string name="none">None</string>
+    <string name="toast">Toast</string>
+    <string name="notification">Notification</string>
+    <string name="toast_summary">toast</string>
+    <string name="notification_summary">notification</string>
     <string name="notifications_summary">A %s will be shown when an app is granted or denied Superuser permissions</string>
+    <string name="no_notification">No notification will be shown</string>
     <string name="enter_pin">Enter PIN</string>
     <string name="enter_new_pin">Enter New PIN</string>
     <string name="incorrect_pin">Incorrect PIN</string>
@@ -55,9 +60,6 @@
     <string name="number_seconds">%s seconds</string>
     <string name="superuser_granted">Superuser granted to %s</string>
     <string name="superuser_denied">Superuser denied to %s</string>
-    <string name="toast">Toast</string>
-    <string name="notification">Notification</string>
-    <string name="no_notification">No notification will be shown</string>
     <string name="developer_warning">Developer Warning:\nandroid.permission.ACCESS_SUPERUSER\nnot declared in manifest.</string>
     <string name="superuser_description">full permissions to all device features and storage</string>
     <string name="superuser_description_more">Superuser grants full access to all device features and storage, including the secure and sensitive hardware elements of your device. This permission is potentially dangerous.</string>
