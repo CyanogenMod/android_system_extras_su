@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Superuser-Anfragen verweigern, wenn sie nach %s Sekunden nicht beantwortet wurden</string>
   <string name="notifications">Benachrichtigungen</string>
   <string name="none">Keine</string>
+  <string name="toast">Kurzzeit-Benachrichtigung</string>
+  <string name="notification">Statusleisten-Benachrichtigung</string>
+  <string name="toast_summary">Kurzzeit-Benachrichtigung</string>
+  <string name="notification_summary">Benachrichtigung</string>
   <string name="notifications_summary">Eine %s anzeigen, wenn einer App Superuser-Rechte gewährt oder verweigert werden</string>
+  <string name="no_notification">Keine Benachrichtigungen anzeigen</string>
   <string name="enter_pin">PIN eingeben</string>
   <string name="enter_new_pin">Neue PIN eingeben</string>
   <string name="incorrect_pin">Falsche PIN</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s Sekunden</string>
   <string name="superuser_granted">Superuser für %s gewährt</string>
   <string name="superuser_denied">Superuser für %s verweigert</string>
-  <string name="toast">Kurzzeit-Benachrichtigung</string>
-  <string name="notification">Statusleisten-Benachrichtigung</string>
-  <string name="no_notification">Keine Benachrichtigungen anzeigen</string>
   <string name="developer_warning">Entwickler-Warnung:\nandroid.permission.ACCESS_SUPERUSER\n wurde im Manifest nicht deklariert.</string>
   <string name="superuser_description">Voller Zugriff auf alle Gerätefunktionen und Speicher</string>
   <string name="superuser_description_more">Superuser gewährt vollen Zugriff auf alle Gerätefunktionen und Speicher, einschließlich der sicheren und sensiblen Hardware-Elemente Ihres Geräts. Diese Berechtigung ist potenziell gefährlich.</string>

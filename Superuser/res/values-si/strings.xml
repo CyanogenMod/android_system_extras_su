@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">සුපිරි පරිශීලක ඉල්ලීම තත්පර %sකින් කල්ඉකුත් වී ප්‍රතික්ෂේප වනු ඇත</string>
   <string name="notifications">දැනුම්දීම්</string>
   <string name="none">කිසිවක් නැත</string>
+  <string name="toast">චූර්ණිකාව</string>
+  <string name="notification">දැනුම්දීම</string>
+  <string name="toast_summary">චූර්ණිකාව</string>
+  <string name="notification_summary">දැනුම්දීම</string>
   <string name="notifications_summary">යෙදුමකට සුපිරි පරිශීලක අනුමැතිය ලැබුණු විට හෝ නොලැබුණු විට %sක් පෙන්වයි</string>
+  <string name="no_notification">කිසිඳු දැනුම්දීමක් නොපෙන්වයි</string>
   <string name="enter_pin">PIN ඇතුළත් කරන්න</string>
   <string name="enter_new_pin">නව PIN ඇතුළත් කරන්න</string>
   <string name="incorrect_pin">වැරදි PIN</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">තත්පර %s</string>
   <string name="superuser_granted">%sට සුපිරි පරිශීලකත්වය දෙන ලදී</string>
   <string name="superuser_denied">%sට සුපිරි පරිශීලකත්වය ප්‍රතික්ෂේප විය</string>
-  <string name="toast">චූර්ණිකාව</string>
-  <string name="notification">දැනුම්දීම</string>
-  <string name="no_notification">කිසිඳු දැනුම්දීමක් නොපෙන්වයි</string>
   <string name="developer_warning">වර්ධක අවවාදය:\nandroid.permission.ACCESS_SUPERUSER\nලේඛනයෙහි ප්‍රකාශ කර නොමැත.</string>
   <string name="superuser_description">උපාංගයේ විශේෂාංග සහ ආචයනය සඳහා සම්පූර්ණ අනුමැතිය</string>
   <string name="superuser_description_more">සුපිරි පරිශීලක, ඔබගේ උපාංගයේ සුරක්ෂිත සහ සංවේදී දෘඩාංග මූලිකාංගද ඇතුලත්ව, සියලුම උපාංග විශේෂාංග සහ ආචයනය සඳහා සම්පූර්ණ පිවිසුම් බලය ලබාදෙයි. මෙම අනුමැතිය අනතුරුදායක විය හැක.</string>

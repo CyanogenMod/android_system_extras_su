@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Las peticiones tienen un tiempo de espera y se denegarán después de %s segundos</string>
   <string name="notifications">Notificaciones</string>
   <string name="none">Ninguna</string>
-  <string name="notifications_summary">Notificación que se mostrará cuando se conceda acceso administrativo a una aplicación: %s</string>
+  <string name="toast">Mensaje emergente</string>
+  <string name="notification">Notificación</string>
+  <string name="toast_summary">un mensaje emergente</string>
+  <string name="notification_summary">una notificación</string>
+  <string name="notifications_summary">Se mostrará %s cuando se conceda o deniegue el acceso administrativo a una aplicación.</string>
+  <string name="no_notification">No se mostrará ninguna notificación</string>
   <string name="enter_pin">Introducir PIN</string>
   <string name="enter_new_pin">Introducir nuevo PIN</string>
   <string name="incorrect_pin">PIN incorrecto</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s segundos</string>
   <string name="superuser_granted">Acceso administrativo permitido a %s</string>
   <string name="superuser_denied">Acceso administrativo denegado a %s</string>
-  <string name="toast">Notificación emergente</string>
-  <string name="notification">Barra de estado</string>
-  <string name="no_notification">No se mostrará ninguna notificación</string>
   <string name="developer_warning">Advertencia al desarrollador:\nandroid.permission.ACCESS_SUPERUSER\nno declarado en manifest.</string>
   <string name="superuser_description">Acceso completo a todas las funciones y almacenamiento del dispositivo</string>
   <string name="superuser_description_more">Superusuario permite el acceso a todas las funciones y almacenamiento del dispositivo, incluyendo los elementos de hardware seguros y sensibles del dispositivo. Este permiso es potencialmente peligroso.</string>

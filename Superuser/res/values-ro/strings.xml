@@ -43,7 +43,10 @@
   <string name="request_timeout_summary">Cererile Superuser vor expira și vor fi refuzate după %s secunde</string>
   <string name="notifications">Notificări</string>
   <string name="none">Nimic</string>
+  <string name="toast">Alertă</string>
+  <string name="notification">Notificare</string>
   <string name="notifications_summary">O %s se va afișa când unei aplicații i se acordă sau i se refuză permisiuni de Superuser</string>
+  <string name="no_notification">Nici o notificare nu va fi afișată</string>
   <string name="enter_pin">Introduceți PIN</string>
   <string name="enter_new_pin">Introduceți noul PIN</string>
   <string name="incorrect_pin">PIN incorect</string>
@@ -53,9 +56,6 @@
   <string name="number_seconds">%s secunde</string>
   <string name="superuser_granted">Superuser acordat pentru %s</string>
   <string name="superuser_denied">Superuser refuzat pentru %s</string>
-  <string name="toast">Alertă</string>
-  <string name="notification">Notificare</string>
-  <string name="no_notification">Nici o notificare nu va fi afișată</string>
   <string name="developer_warning">Avertizare Dezvoltator:\nandroid.permission.ACCESS_SUPERUSER\nnu este declarat în manifest.</string>
   <string name="superuser_description">permisiuni depline pentru toate caracteristicile dispozitivului și stocare</string>
   <string name="superuser_description_more">Superuser acordă acces deplin pentru toate caracteristicile dispozitivului și stocare, inclusiv elementele sigure și sensibile hardware ale dispozitivului dvs. Această permisiune este potențial periculoasă.</string>

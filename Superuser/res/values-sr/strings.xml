@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Супекорисник захтеви ће бити искључени и бити одбијени након %s секунди</string>
   <string name="notifications">Обавештења</string>
   <string name="none">Ниједно</string>
+  <string name="toast">Искачући прозор</string>
+  <string name="notification">Обавештење</string>
+  <string name="toast_summary">облак</string>
+  <string name="notification_summary">обавештење</string>
   <string name="notifications_summary">%s ће бити приказан када је апликација одобрена или одбијена од Суперкорисника</string>
+  <string name="no_notification">Ниједно обавештење неће бити приказано</string>
   <string name="enter_pin">Унеси PIN</string>
   <string name="enter_new_pin">Унеси нови PIN</string>
   <string name="incorrect_pin">Нетачан PIN</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s секунде</string>
   <string name="superuser_granted">Суперкорисник одобрен за %s</string>
   <string name="superuser_denied">Суперкорисник одбијен за %s</string>
-  <string name="toast">Искачући прозор</string>
-  <string name="notification">Обавештење</string>
-  <string name="no_notification">Ниједно обавештење неће бити приказано</string>
   <string name="developer_warning">Упозорење аутора:\nandroid.permission.ACCESS_SUPERUSER\n није објављено у манифесту.</string>
   <string name="superuser_description">Пуне дозволе свим функцијама уређаја и складишту</string>
   <string name="superuser_description_more">Суперкорисник даје пун приступ свим функцијама и складишту, укључујући и безбедне и осетљиве хардверске елементе твог уређаја. Ова дозвола је потенцијално опасна.</string>

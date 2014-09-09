@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">„Superuser“ užklausos pasibaigs ir bus atmestos po %s sek.</string>
   <string name="notifications">Pranešimai</string>
   <string name="none">Nerodomi</string>
+  <string name="toast">Informacinis langelis</string>
+  <string name="notification">Pranešimas</string>
+  <string name="toast_summary">informacinis langelis</string>
+  <string name="notification_summary">pranešimas</string>
   <string name="notifications_summary">%s rodomas kai programai bus suteiktos arba atmestos „Superuser“ teisės</string>
+  <string name="no_notification">Pranešimas nebus rodomas</string>
   <string name="enter_pin">Įveskite PIN kodą</string>
   <string name="enter_new_pin">Įveskite naują PIN kodą</string>
   <string name="incorrect_pin">Neteisingas PIN kodas</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s sek.</string>
   <string name="superuser_granted">„Superuser“ suteiktas %s</string>
   <string name="superuser_denied">„Superuser“ atmestas %s</string>
-  <string name="toast">Informacinis langelis</string>
-  <string name="notification">Pranešimas</string>
-  <string name="no_notification">Pranešimas nebus rodomas</string>
   <string name="developer_warning">Kūrėjo Įspėjimas:\nandroid.permission.ACCESS_SUPERUSER\nnedeklaruotas manifeste.</string>
   <string name="superuser_description">visos teisės į visas įrenginio funkcijas, saugyklą</string>
   <string name="superuser_description_more">„Superuser“ suteikiamos visos prieigos į visas įrenginio funkcijas, saugyklą. Šis leidimas gali būti pavojingas.</string>

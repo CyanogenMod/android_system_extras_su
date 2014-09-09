@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Superuser forespørsler vil automatisk bli avslått etter %s sekunder</string>
   <string name="notifications">Varslinger</string>
   <string name="none">Ingen</string>
+  <string name="toast">Toast</string>
+  <string name="notification">Varsling</string>
+  <string name="toast_summary">Notifikasjonsoppsummering</string>
+  <string name="notification_summary">notifikasjon</string>
   <string name="notifications_summary">En %s vil bli vist når en app får innvilget eller blir nektet Superuser tilgang</string>
+  <string name="no_notification">Ingen varsling vil bli vist</string>
   <string name="enter_pin">Velg PIN-kode</string>
   <string name="enter_new_pin">Velg ny PIN-kode</string>
   <string name="incorrect_pin">Feil PIN-kode</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s sekunder</string>
   <string name="superuser_granted">Superuser tilgang innvilget til %s</string>
   <string name="superuser_denied">Superuser tilgang nektet til %s</string>
-  <string name="toast">Toast</string>
-  <string name="notification">Varsling</string>
-  <string name="no_notification">Ingen varsling vil bli vist</string>
   <string name="developer_warning">Utvikler Advarsel:\nandroid.permission.ACCESS_SUPERUSER\ner ikke deklarert i manifestet.</string>
   <string name="superuser_description">full tilgang til alle funksjoner og all lagring på enheten</string>
   <string name="superuser_description_more">Superuser innvilger full tilgang til alle funksjoner og all lagring på enheten, inkludert sikre og sensitive maskinvare elementer på enheten. Denne tillatelsen er potensielt farlig.</string>

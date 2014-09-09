@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Les peticions de Superusuari tindran un temps d\'espera i seran denegades després de %s segons</string>
   <string name="notifications">Notificacions</string>
   <string name="none">Cap</string>
+  <string name="toast">Notificació emergent</string>
+  <string name="notification">Notificació</string>
+  <string name="toast_summary">notificació emergent</string>
+  <string name="notification_summary">notificació</string>
   <string name="notifications_summary">Es mostrarà una %s quan a una aplicació se li otorguin o deneguin permisos de Superusuari</string>
+  <string name="no_notification">No es mostraran notificacions</string>
   <string name="enter_pin">Introdueix PIN</string>
   <string name="enter_new_pin">Introdueix nou PIN</string>
   <string name="incorrect_pin">PIN incorrecte</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s segons</string>
   <string name="superuser_granted">Superusuari otorgat a %s</string>
   <string name="superuser_denied">Superusuari denegat a %s</string>
-  <string name="toast">Notificació emergent</string>
-  <string name="notification">Notificació</string>
-  <string name="no_notification">No es mostraran notificacions</string>
   <string name="developer_warning">Alerta pel Desenvolupador:\nandroid.permission.ACCESS_SUPERUSER\nno declarada al manifest.</string>
   <string name="superuser_description">permisos totals a totes les característiques i emmagatzematge del dispositiu</string>
   <string name="superuser_description_more">Superusuari otorga accés total a totes les característiques del dispositiu i emmagatzematge, incloent els elements segurs i sensibles del maquinari del teu dispositiu. Aquest permís és potencialment perillós.</string>

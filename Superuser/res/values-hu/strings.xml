@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">A rendszergazdai jog kérések %s másodperc után el lesznek utasítva</string>
   <string name="notifications">Figyelmeztetések</string>
   <string name="none">Nincs</string>
+  <string name="toast">Buborékszöveg</string>
+  <string name="notification">Figyelmeztetés</string>
+  <string name="toast_summary">buborékszöveg</string>
+  <string name="notification_summary">értesítés</string>
   <string name="notifications_summary">%s megjelenítése rendszergazdai jog kérésekor</string>
+  <string name="no_notification">Nem jelennek meg az értesítések</string>
   <string name="enter_pin">Adja meg a PIN-kódot</string>
   <string name="enter_new_pin">Adja meg az új PIN-kódot</string>
   <string name="incorrect_pin">Helytelen PIN-kód</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s másodperc</string>
   <string name="superuser_granted">%s rendszergazdai jogot kapott</string>
   <string name="superuser_denied">%s rendszergazdai jog kérése megtagadva</string>
-  <string name="toast">Buborékszöveg</string>
-  <string name="notification">Figyelmeztetés</string>
-  <string name="no_notification">Nem jelennek meg az értesítések</string>
   <string name="developer_warning">Fejlesztői figyelmeztetés:\nandroid.permission.ACCESS_SUPERUSER\nnincs deklarálva a manifest fájlban.</string>
   <string name="superuser_description">teljes hozzáférés az összes eszközfunkcióhoz és tárolóhoz</string>
   <string name="superuser_description_more">Teljes rendszergazdai hozzáférést ad az összes eszközfunkcióhoz és tárolóhoz, beleértve a készülék egyébként védett és érzékeny hardverelemeit. Ez az engedély potenciálisan veszélyes.</string>

@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Yetkili Kullanıcı istekleri %s saniye sonra zaman aşımına uğrayıp reddedilecek</string>
   <string name="notifications">Bildirimler</string>
   <string name="none">Yok</string>
+  <string name="toast">Toast</string>
+  <string name="notification">Bildirim</string>
+  <string name="toast_summary">bildirim</string>
+  <string name="notification_summary">bildirim</string>
   <string name="notifications_summary">Bir uygulamanın Yetklili Kullanıcı isteği kabul ya da red edildiğinde %s görüntülenecek</string>
+  <string name="no_notification">Hiçbir bildirim görüntülenmeyecek</string>
   <string name="enter_pin">PIN\'i girin</string>
   <string name="enter_new_pin">Yeni PIN girin</string>
   <string name="incorrect_pin">Geçirsiz PIN</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s saniye</string>
   <string name="superuser_granted">Yetkili kullanıcı hakları %s için sağlandı</string>
   <string name="superuser_denied">Yetkili kullanıcı hakları %s için reddedildi</string>
-  <string name="toast">Toast</string>
-  <string name="notification">Bildirim</string>
-  <string name="no_notification">Hiçbir bildirim görüntülenmeyecek</string>
   <string name="developer_warning">Geliştirici Uyarısı:\nandroid.permission.ACCESS_SUPERUSER\nmanifest içinde ayarlanmamış.</string>
   <string name="superuser_description">tüm cihaz özelliklerine ve depolama birimlerine sınırsız erişim</string>
   <string name="superuser_description_more">Superuser cihazınızın güvenli ve hassas donanım bileşenleri dahil olmak üzere cihaz özelliklerine ve depolama alanlarına sınırsız bir yetkili kullanıcı erişimi sağlayacak. Bu erişim muhtemelen tehlikelidir.</string>

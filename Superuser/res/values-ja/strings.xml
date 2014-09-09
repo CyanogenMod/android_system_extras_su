@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">スーパーユーザーリクエストは%s秒後にタイムアウトして拒否されます</string>
   <string name="notifications">通知</string>
   <string name="none">なし</string>
+  <string name="toast">トースト</string>
+  <string name="notification">通知</string>
+  <string name="toast_summary">トースト</string>
+  <string name="notification_summary">通知</string>
   <string name="notifications_summary">スーパーユーザー権限がアプリに許可または拒否されたときに%sを表示する</string>
+  <string name="no_notification">通知は表示されません</string>
   <string name="enter_pin">PINを入力</string>
   <string name="enter_new_pin">新しいPINを入力</string>
   <string name="incorrect_pin">PINが正しくありません</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s秒</string>
   <string name="superuser_granted">スーパーユーザーが%sに許可されました</string>
   <string name="superuser_denied">スーパーユーザーが%sに許可されませんでした</string>
-  <string name="toast">トースト</string>
-  <string name="notification">通知</string>
-  <string name="no_notification">通知は表示されません</string>
   <string name="developer_warning">開発者への警告:\nandroid.permission.ACCESS_SUPERUSER\nがマニフェストで宣言されていません。</string>
   <string name="superuser_description">すべてのデバイスの機能とストレージへの完全なアクセス許可</string>
   <string name="superuser_description_more">スーパーユーザーはセキュリティで保護されている繊細なハードウェア要素を含めた端末のすべての機能とストレージへの完全なアクセスを許可します。この権限は潜在的に危険です。</string>

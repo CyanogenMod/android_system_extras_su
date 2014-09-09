@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Les solicitúes tienen un tiempu d\'espera y van refugase dempués de %s segundos</string>
   <string name="notifications">Notificaciones</string>
   <string name="none">Nengún</string>
+  <string name="toast">Notificación emerxente</string>
+  <string name="notification">Notificación</string>
+  <string name="toast_summary">notificación emerxente</string>
+  <string name="notification_summary">notificación</string>
   <string name="notifications_summary">Va amosase una %s cuando a una aplicación se-y otorguen o refugen permisos de Superusuariu</string>
+  <string name="no_notification">Nun va amosase nenguna notificación</string>
   <string name="enter_pin">Inxertar PIN</string>
   <string name="enter_new_pin">Inxertar PIN nuevu</string>
   <string name="incorrect_pin">PIN incorreutu</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s segundos</string>
   <string name="superuser_granted">Superusuariu otorgáu a %s</string>
   <string name="superuser_denied">Superusuariu refugáu a %s</string>
-  <string name="toast">Notificación emerxente</string>
-  <string name="notification">Notificación</string>
-  <string name="no_notification">Nun va amosase nenguna notificación</string>
   <string name="developer_warning">Avisu al desendolcador:\nandroid.permission.ACCESS_SUPERUSER\nnon declaráu en manifest.</string>
   <string name="superuser_description">accesu completu a toles funciones y almacenamientu del preséu</string>
   <string name="superuser_description_more">Superusuariu permite l\'accesu a toles funciones y almacenamientu del preséu, incluyendo los elementos de hardware seguros y sensibles del preséu. Esti permisu ye enforma peligrosu.</string>

@@ -46,7 +46,10 @@
   <string name="request_timeout_summary">داواکاری سوپه‌ریوزه‌ر   %s چرکه‌</string>
   <string name="notifications">تێبینیه‌کان</string>
   <string name="none">هیچیان</string>
+  <string name="toast">برژاو</string>
+  <string name="notification">تێبنیه‌کان</string>
   <string name="notifications_summary">A %s دیار ئه‌دات له‌کاتێکدا ئه‌گه‌ر به‌رنامه‌که‌ وه‌رگیرا یان پوچه‌ڵکرا له‌لایه‌ن سوپه‌ر یوزه‌ره‌وه‌</string>
+  <string name="no_notification">تێبینی نیشان نادرێت</string>
   <string name="enter_pin">دانانی PIN</string>
   <string name="enter_new_pin">دانانی PIN تازه‌</string>
   <string name="incorrect_pin">PIN ناڕاست</string>
@@ -56,9 +59,6 @@
   <string name="number_seconds">%s چرکه‌</string>
   <string name="superuser_granted">سوپه‌ریوزه‌ر قبوڵی کرد بۆ %s</string>
   <string name="superuser_denied">سوپه‌ریوزه‌ر نکوڵی کرد له‌ %s</string>
-  <string name="toast">برژاو</string>
-  <string name="notification">تێبنیه‌کان</string>
-  <string name="no_notification">تێبینی نیشان نادرێت</string>
   <string name="developer_warning">ئاگاداری پێشکه‌وتووخواز:\nandroid.permission.ACCESS_SUPERUSER\nnot declared in manifest.</string>
   <string name="superuser_description">ڕێگه‌دانی هوموو شێوازی ئامێره‌کان بۆ بیرگه‌</string>
   <string name="superuser_description_more">سوپه‌ریوزه‌ر ڕێگه‌ ده‌دات به‌ هه‌موو بیرگه‌ و شێوازی ئامێره‌کان، ڕه‌قه‌کاڵا ده‌گرێته‌وه‌،ئه‌م کرداره‌ مه‌ترسی داره‌</string>

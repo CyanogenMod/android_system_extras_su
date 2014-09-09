@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Superuser versoeke sal verstryk en verwerp word na %s sekondes</string>
   <string name="notifications">Kennisgewings</string>
   <string name="none">Geen</string>
+  <string name="toast">Opspring kennisgewing</string>
+  <string name="notification">Kennisgewing</string>
+  <string name="toast_summary">uitspring kennisgewing</string>
+  <string name="notification_summary">kennisgewing</string>
   <string name="notifications_summary">\'n %s sal getoon word wanneer \'n program Superuser regte toegeken of geweier word</string>
+  <string name="no_notification">Geen kennisgewings sal vertoon word nie</string>
   <string name="enter_pin">Voer PIN in</string>
   <string name="enter_new_pin">Gee \'n nuwe PIN</string>
   <string name="incorrect_pin">Verkeerde PIN</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s sekondes</string>
   <string name="superuser_granted">Superuser toegestaan ​​aan %s</string>
   <string name="superuser_denied">Superuser geweier aan %s</string>
-  <string name="toast">Opspring kennisgewing</string>
-  <string name="notification">Kennisgewing</string>
-  <string name="no_notification">Geen kennisgewings sal vertoon word nie</string>
   <string name="developer_warning">Ontwikkelaar Waarskuwing:\nandroid.permission.ACCESS_SUPERUSER\nis nie in program \'manifest\' verklaar nie.</string>
   <string name="superuser_description">Volle regte aan alle toestel funksies en stoorspasie</string>
   <string name="superuser_description_more">Superuser verleen volle (Administrasie) toegang tot alle toestel funksies en stoorspasie, insluitend veilige en sensitiewe hardeware elemente van jou toestel. Hierdie toestemming kan potensieel gevaarlik wees.</string>

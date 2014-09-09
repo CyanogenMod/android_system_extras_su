@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Les demandes Super-utilisateur expireront et seront refusées après %s secondes</string>
   <string name="notifications">Notifications</string>
   <string name="none">Aucune</string>
-  <string name="notifications_summary">Une %s sera affichée lorsque les droits Super-utilisateur seront accordés ou refusés à une application</string>
+  <string name="toast">Pop-up</string>
+  <string name="notification">Notification</string>
+  <string name="toast_summary">Un pop-up sera affiché</string>
+  <string name="notification_summary">Une notification sera affichée</string>
+  <string name="notifications_summary">%s lorsque les droits Super-utilisateur seront accordés ou refusés à une application</string>
+  <string name="no_notification">Aucune notification ne sera affichée</string>
   <string name="enter_pin">Entrer le code</string>
   <string name="enter_new_pin">Entrer le nouveau code</string>
   <string name="incorrect_pin">Code incorrect</string>
@@ -56,10 +61,7 @@
   <string name="number_seconds">%s secondes</string>
   <string name="superuser_granted">Droits Super-utilisateur accordés à %s</string>
   <string name="superuser_denied">Droits Super-utilisateur refusés à %s</string>
-  <string name="toast">Notification pop-up</string>
-  <string name="notification">Notification</string>
-  <string name="no_notification">Aucune notification ne sera affichée</string>
-  <string name="developer_warning">Mise en garde Développeur :\nandroid.permission.ACCESS_SUPERUSER\nnon déclaré dans le manifest.</string>
+  <string name="developer_warning">Mise en garde développeur :\nandroid.permission.ACCESS_SUPERUSER\nnon déclaré dans le manifeste.</string>
   <string name="superuser_description">autorisations totales pour toutes les fonctionnalités et tous les emplacements de stockage de l\'appareil</string>
   <string name="superuser_description_more">Super-utilisateur permet un accès total à toutes les fonctionnalités et tous les emplacements de stockage de l\'appareil, incluant ses éléments matériels sécurisés et sensibles. Cette permission est potentiellement dangereuse.</string>
   <string name="declared_permission">Autorisations déclarées</string>

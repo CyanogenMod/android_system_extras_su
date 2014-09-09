@@ -46,7 +46,10 @@
   <string name="request_timeout_summary">Superuser zahtjevi će isteći i biti će odbijeni nakon %s sekundi</string>
   <string name="notifications">Obavijesti</string>
   <string name="none">Ništa</string>
+  <string name="toast">Tost</string>
+  <string name="notification">Obavijest</string>
   <string name="notifications_summary">%s će biti prikazane kada je aplikacija odobrila ili odbila Superuser dozvolu</string>
+  <string name="no_notification">Obavijesti neće biti prikazane</string>
   <string name="enter_pin">Unesite PIN</string>
   <string name="enter_new_pin">Unesite Nov PIN</string>
   <string name="incorrect_pin">Pogrešan PIN</string>
@@ -56,9 +59,6 @@
   <string name="number_seconds">%s sekundi</string>
   <string name="superuser_granted">Superuser odobren aplikaciji %s</string>
   <string name="superuser_denied">Superuser odbijen za %s</string>
-  <string name="toast">Tost</string>
-  <string name="notification">Obavijest</string>
-  <string name="no_notification">Obavijesti neće biti prikazane</string>
   <string name="developer_warning">Upozorenje za razvojne programere:\nandroid.permission.ACCESS_SUPERUSER\nnot declared in manifest.</string>
   <string name="superuser_description">potpuna dozvola svim značajkama uređaja i pohranjivanju</string>
   <string name="superuser_description_more">Superuser odobrava potpuni pristup svim značajkama uređaja i pohranjivanju, uključujući sigurnosne i osjetljive hardverske elemente vašeg uređaja. Ova je dozvola potencijalno opasna.</string>

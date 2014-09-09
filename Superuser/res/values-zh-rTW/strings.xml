@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">超級使用者要求會在 %s 秒後逾時並被拒絕</string>
   <string name="notifications">通知</string>
   <string name="none">無</string>
+  <string name="toast">彈出訊息 (Toast)</string>
+  <string name="notification">通知</string>
+  <string name="toast_summary">彈出訊息</string>
+  <string name="notification_summary">通知</string>
   <string name="notifications_summary">應用程式被授予或拒絕超級使用者權限時會顯示%s</string>
+  <string name="no_notification">不顯示通知</string>
   <string name="enter_pin">輸入 PIN 碼</string>
   <string name="enter_new_pin">輸入新 PIN 碼</string>
   <string name="incorrect_pin">PIN 碼錯誤</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s 秒</string>
   <string name="superuser_granted">超級使用者授予了「%s」</string>
   <string name="superuser_denied">超級使用者拒絕了「%s」</string>
-  <string name="toast">彈出訊息 (Toast)</string>
-  <string name="notification">通知</string>
-  <string name="no_notification">不顯示通知</string>
   <string name="developer_warning">開發人員警告：\n還沒有在 manifest 宣告\nandroid.permission.ACCESS_SUPERUSER。</string>
   <string name="superuser_description">對所有裝置功能和儲存空間的完全權限</string>
   <string name="superuser_description_more">超級使用者授予對所有裝置功能和儲存空間的完全存取權，包括您裝置安全與機密的硬體元件。這個權限有潛在的風險。</string>

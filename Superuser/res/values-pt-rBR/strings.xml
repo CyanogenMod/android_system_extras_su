@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Pedidos de Superusuário irão expirar e serão negados após %s segundos</string>
   <string name="notifications">Notificações</string>
   <string name="none">Nenhum</string>
+  <string name="toast">Toast (Aviso na tela)</string>
+  <string name="notification">Notificação</string>
+  <string name="toast_summary">aviso na tela</string>
+  <string name="notification_summary">notificação</string>
   <string name="notifications_summary">Uma %s será mostrado quando um aplicativo é concedido ou negado permissões de Superusuário</string>
+  <string name="no_notification">Nenhuma notificação será mostrada.</string>
   <string name="enter_pin">Digite o PIN</string>
   <string name="enter_new_pin">Digite um novo PIN</string>
   <string name="incorrect_pin">PIN incorreto!</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s segundos</string>
   <string name="superuser_granted">Permissões de Superusuário concedidas para %s</string>
   <string name="superuser_denied">Permissões de Superusuário negadas para %s</string>
-  <string name="toast">Toast (Aviso na tela)</string>
-  <string name="notification">Notificação</string>
-  <string name="no_notification">Nenhuma notificação será mostrada.</string>
   <string name="developer_warning">Aviso de Desenvolvedor:\nandroid.permission.ACCESS_SUPERUSER\nnão declarado no manifest.</string>
   <string name="superuser_description">Permissões completas para todos os recursos do dispositivo e armazenamento</string>
   <string name="superuser_description_more">O Superusuário concede acesso total a todos os recursos do dispositivo e de armazenamento, incluindo os elementos de hardware seguros e sensíveis do seu dispositivo. Estas permissões são potencialmente perigosas.</string>

@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Запрос прав Суперпользователя будет автоматически отклонён после %s секунд</string>
   <string name="notifications">Уведомления</string>
   <string name="none">Выключены</string>
+  <string name="toast">Всплывающее оповещение</string>
+  <string name="notification">Уведомление в строке состояния</string>
+  <string name="toast_summary">всплывающее оповещение</string>
+  <string name="notification_summary">уведомление в строке состояния</string>
   <string name="notifications_summary">Будет показано %s о предоставлении прав Суперпользователя</string>
+  <string name="no_notification">Уведомления отключены</string>
   <string name="enter_pin">Введите PIN-код</string>
   <string name="enter_new_pin">Введите новый PIN-код</string>
   <string name="incorrect_pin">Неправильный PIN-код</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s секунд</string>
   <string name="superuser_granted">Приложению «%s» предоставлены права суперпользователя</string>
   <string name="superuser_denied">Приложению «%s» отказано в получении прав суперпользователя</string>
-  <string name="toast">всплывающее оповещение</string>
-  <string name="notification">уведомление в строке состояния</string>
-  <string name="no_notification">Уведомления отключены</string>
   <string name="developer_warning">Внимание:\nразрешение android.permission.ACCESS_SUPERUSER\nне объявлено в манифесте приложения.</string>
   <string name="superuser_description">Полный доступ к функциям устройства и памяти</string>
   <string name="superuser_description_more">Права Суперпользователя предоставляют полный доступ к функциям и памяти устройства, в том числе к аппаратной составляющей. Предоставление этих прав является потенциально опасным.</string>

@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Żądanie Superuser zostanie odrzucone po upływie %s sekund</string>
   <string name="notifications">Powiadomienia</string>
   <string name="none">Brak</string>
+  <string name="toast">Dymek</string>
+  <string name="notification">Powiadomienie</string>
+  <string name="toast_summary">dymek</string>
+  <string name="notification_summary">powiadomienie</string>
   <string name="notifications_summary">%s poinformuje o przyznaniu lub nie uprawnień Superuser</string>
+  <string name="no_notification">Żadne powiadomienia nie będą wyświetlane</string>
   <string name="enter_pin">Wprowadź PIN</string>
   <string name="enter_new_pin">Wprowadź nowy PIN</string>
   <string name="incorrect_pin">Niepoprawny PIN</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s sekund</string>
   <string name="superuser_granted">Przyznano uprawnienia dla %s</string>
   <string name="superuser_denied">Odmówiono uprawnień dla %s</string>
-  <string name="toast">Dymek</string>
-  <string name="notification">Powiadomienie</string>
-  <string name="no_notification">Żadne powiadomienia nie będą wyświetlane</string>
   <string name="developer_warning">Uwaga:\nandroid.permission.ACCESS_SUPERUSER\nnie zostały zadeklarowane w manifeście.</string>
   <string name="superuser_description">pełne uprawnienia dla wszystkich funkcji i magazynu urządzenia</string>
   <string name="superuser_description_more">Superuser zapewnia pełne uprawnienia dla wszystkich funkcji i magazynu urządzenia, w tym zabezpieczonych i wrażliwych elementów sprzętowych urządzenia. Uprawnienia te mogą być potencjalnie niebezpieczne.</string>

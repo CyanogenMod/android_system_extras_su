@@ -46,7 +46,10 @@
   <string name="request_timeout_summary">Superuserbegäran nekas automatiskt efter %s sekunder</string>
   <string name="notifications">Aviseringar</string>
   <string name="none">Inga</string>
+  <string name="toast">Aviseringsbubbla</string>
+  <string name="notification">Avisering</string>
   <string name="notifications_summary">En %s visas när en app beviljas eller nekas Superuserrättigheter</string>
+  <string name="no_notification">Ingen avisering kommer att visas</string>
   <string name="enter_pin">Ange PIN</string>
   <string name="enter_new_pin">Ange ny PIN</string>
   <string name="incorrect_pin">Felaktig PIN</string>
@@ -56,9 +59,6 @@
   <string name="number_seconds">%s sekunder</string>
   <string name="superuser_granted">Superuser beviljad till %s</string>
   <string name="superuser_denied">Superuser nekad för %s</string>
-  <string name="toast">Aviseringsbubbla</string>
-  <string name="notification">Avisering</string>
-  <string name="no_notification">Ingen avisering kommer att visas</string>
   <string name="developer_warning">Utvecklarvarning:\nandroid.permission.ACCESS_SUPERUSER\ninte deklarerad i manifestet.</string>
   <string name="superuser_description">fullständig behörighet till alla enhetens funktioner och lagring</string>
   <string name="superuser_description_more">Superuser ger full tillgång till alla enhetens funktioner och lagring inklusive skyddade och känsliga hårdvaruelement i din enhet. Detta medgivande kan vara farligt.</string>

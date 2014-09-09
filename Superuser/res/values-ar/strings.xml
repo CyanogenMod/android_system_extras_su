@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">المستخدم الخارق يتطلب وقت الإيقاف لي الرفض بعد %s ثانية</string>
   <string name="notifications">التنبيهات</string>
   <string name="none">لا شيء</string>
+  <string name="toast">Toast (مربع في الإسفل)</string>
+  <string name="notification">الإعلام</string>
+  <string name="toast_summary">نخب</string>
+  <string name="notification_summary">إعلام</string>
   <string name="notifications_summary">%s سيضهر عندما يطلب او يرفض التطبيق صلاحيات المستخدم الخارق</string>
+  <string name="no_notification">لن بظهر أي إعلام</string>
   <string name="enter_pin">أدخل الرقم الشخصي</string>
   <string name="enter_new_pin">أدخل الرقم الشخصي الجديد</string>
   <string name="incorrect_pin">الرقم الشخصي غير صحيح</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s ثانية</string>
   <string name="superuser_granted">منح المستخدم الخارق لي %s</string>
   <string name="superuser_denied">رفض المستخدم الخارق لي %s</string>
-  <string name="toast">Toast (مربع في الإسفل)</string>
-  <string name="notification">الإعلام</string>
-  <string name="no_notification">لن بظهر أي إعلام</string>
   <string name="developer_warning">تحذير المطور \n android.permission.ACCESS_SUPERUSE \n لن يظهر في البيان.</string>
   <string name="superuser_description">أذونات كاملة إلى جميع ميزات الجهاز والتخزين</string>
   <string name="superuser_description_more">مستخدم خارق يمنح حق الوصول الكامل إلى كافة ميزات الجهاز والتخزين، بما في ذلك عناصر الأجهزة الآمنة والحساسة للجهاز الخاص بك. هذا الإذن يحتمل أن تكون خطرة.</string>

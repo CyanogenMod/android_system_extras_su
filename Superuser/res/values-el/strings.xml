@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Οι αιτήσεις Superuser θα λήγουν και θα αρνούνται μετά από %s δευτερόλεπτα</string>
   <string name="notifications">Ειδοποιήσεις</string>
   <string name="none">Καμία</string>
-  <string name="notifications_summary">Μια %s θα εμφανίζεται όταν επιτρέπονται ή αρνούνται σε μια εφαρμογή τα δικαιώματα Superuser</string>
+  <string name="toast">Μήνυμα</string>
+  <string name="notification">Ειδοποίηση</string>
+  <string name="toast_summary">Ένα μήνυμα</string>
+  <string name="notification_summary">Μια ειδοποίηση</string>
+  <string name="notifications_summary">%s θα εμφανίζεται όταν επιτρέπονται ή αρνούνται σε μια εφαρμογή τα δικαιώματα Superuser</string>
+  <string name="no_notification">Δεν θα εμφανίζεται ειδοποίηση</string>
   <string name="enter_pin">Εισαγωγή PIN</string>
   <string name="enter_new_pin">Εισάγετε νέο PIN</string>
   <string name="incorrect_pin">Λανθασμένο PIN</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s δευτερόλεπτα</string>
   <string name="superuser_granted">%s έλαβε δικαιώματα Superuser</string>
   <string name="superuser_denied">%s αρνήθηκε δικαιώματα Superuser</string>
-  <string name="toast">Μήνυμα</string>
-  <string name="notification">Ειδοποίηση</string>
-  <string name="no_notification">Δεν θα εμφανίζεται ειδοποίηση</string>
   <string name="developer_warning">Προειδοποίηση για προγραμματιστές:\nandroid.permission.ACCESS_SUPERUSER\nδεν έχει δηλωθεί στο manifest.</string>
   <string name="superuser_description">πλήρη δικαιώματα σε όλες τις λειτουργίες της συσκευής και χώρου αποθήκευσης</string>
   <string name="superuser_description_more">Το Superuser παρέχει πλήρη πρόσβαση σε όλες τις λειτουργίες της συσκευής και χώρου αποθήκευσης, συμπεριλαμβανομένων των ευαίσθητων στοιχείων του υλικού της συσκευής σας. Αυτή η άδεια ενδεχομένως είναι επικίνδυνη.</string>

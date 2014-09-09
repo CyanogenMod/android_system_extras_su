@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">בקשות Superuser תהיינה בפסק זמן וישללו לאחר %s שניות</string>
   <string name="notifications">התראות</string>
   <string name="none">ללא</string>
+  <string name="toast">דיווח</string>
+  <string name="notification">התראות</string>
+  <string name="toast_summary">הצהרה</string>
+  <string name="notification_summary">התראה</string>
   <string name="notifications_summary">%s יוצג כאשר אפליקציה אושרה או נדחתה מלקבל הרשאות של Superuser</string>
+  <string name="no_notification">התראות לא יוצגו</string>
   <string name="enter_pin">הכנס PIN</string>
   <string name="enter_new_pin">הכנס PIN חדש</string>
   <string name="incorrect_pin">לא נכון PIN</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s שניות</string>
   <string name="superuser_granted">Superuser אושר למשך %s</string>
   <string name="superuser_denied">Superuser נדחה למשך %s</string>
-  <string name="toast">דיווח</string>
-  <string name="notification">התראות</string>
-  <string name="no_notification">התראות לא יוצגו</string>
   <string name="developer_warning">אזהרת מפתחים: \nandroid.permission.ACCESS_SUPERUSER\n הצהיר במניפסט.</string>
   <string name="superuser_description">הרשאות מלאות לכל תכונות המכשיר והאחסון</string>
   <string name="superuser_description_more">Superuser מעניק גישה מלאה לכל תכונות המכשיר והאחסון, כולל רכיבי חומרה מאובטחים ורגישים של המכשיר. הרשאה זו עלולה להיות מסוכנת.</string>

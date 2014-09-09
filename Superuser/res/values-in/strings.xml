@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Permintaan Superuser akan melebihi batas waktu dan ditolak setelah %s detik</string>
   <string name="notifications">Pemberitahuan</string>
   <string name="none">Tidak Ada</string>
+  <string name="toast">Toast</string>
+  <string name="notification">Pemberitahuan</string>
+  <string name="toast_summary">toast</string>
+  <string name="notification_summary">pemberitahuan</string>
   <string name="notifications_summary">%s akan ditampilkan bila aplikasi diberikan atau ditolak izin Superuser-nya</string>
+  <string name="no_notification">Tidak ada pemberitahuan yang akan ditampilkan</string>
   <string name="enter_pin">Masukkan PIN</string>
   <string name="enter_new_pin">Masukkan PIN baru</string>
   <string name="incorrect_pin">PIN salah</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s detik</string>
   <string name="superuser_granted">Superuser diberikan untuk %s</string>
   <string name="superuser_denied">Superuser ditolak untuk %s</string>
-  <string name="toast">Toast</string>
-  <string name="notification">Pemberitahuan</string>
-  <string name="no_notification">Tidak ada pemberitahuan yang akan ditampilkan</string>
   <string name="developer_warning">Peringatan Pengembang:\nandroid.permission.ACCESS_SUPERUSER\ntidak dideklarasikan dalam manifes.</string>
   <string name="superuser_description">izin penuh untuk semua fitur perangkat dan penyimpanan</string>
   <string name="superuser_description_more">Superuser memberikan akses penuh ke semua fitur perangkat dan penyimpanan, termasuk unsur-unsur aman dan sensitif perangkat anda. Izin ini berpotensi menimbulkan bahaya.</string>

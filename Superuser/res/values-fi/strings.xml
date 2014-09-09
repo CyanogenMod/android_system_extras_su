@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Pyyntö aikakatkaistaan ja pääkäyttäjän oikeudet estetään %s sekunnin kuluttua</string>
   <string name="notifications">Ilmoitukset</string>
   <string name="none">Ei mitään</string>
+  <string name="toast">Toast-ilmoitus</string>
+  <string name="notification">Ilmoitus</string>
+  <string name="toast_summary">Toast-ilmoitus</string>
+  <string name="notification_summary">Ilmoitus</string>
   <string name="notifications_summary">%s näytetään, kun sovellukselle myönnetään/estetään pääkäyttäjän oikeudet</string>
+  <string name="no_notification">Ilmoitusta ei näytetä</string>
   <string name="enter_pin">Syötä PIN</string>
   <string name="enter_new_pin">Syötä uusi PIN</string>
   <string name="incorrect_pin">Väärä PIN</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s sekuntia</string>
   <string name="superuser_granted">Pääkäyttäjän oikeudet myönnetty sovellukselle %s</string>
   <string name="superuser_denied">Pääkäyttäjän oikeudet estetty sovellukselta %s</string>
-  <string name="toast">Toast-ilmoitus</string>
-  <string name="notification">Ilmoitus</string>
-  <string name="no_notification">Ilmoitusta ei näytetä</string>
   <string name="developer_warning">Kehittäjävaroitus:\nandroid.permission.ACCESS_SUPERUSER\npuuttuu manifestista.</string>
   <string name="superuser_description">täydet oikeudet kaikkiin laitteen ominaisuuksiin ja muistiin</string>
   <string name="superuser_description_more">Superuser antaa täydet oikeudet kaikkiin laitteen ominaisuuksiin ja muistiin, mukaanlukien suojatut ja arkaluonteiset laitteiston osat. Tämä käyttöoikeus saattaa olla vaarallinen.</string>

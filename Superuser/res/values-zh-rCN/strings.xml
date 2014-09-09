@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">%s 秒后超级用户请求将超时并被拒绝</string>
   <string name="notifications">通知</string>
   <string name="none">无</string>
+  <string name="toast">提示</string>
+  <string name="notification">通知</string>
+  <string name="toast_summary">提示</string>
+  <string name="notification_summary">通知</string>
   <string name="notifications_summary">当应用被允许或拒绝时将显示一个%s</string>
+  <string name="no_notification">不显示通知</string>
   <string name="enter_pin">输入密码</string>
   <string name="enter_new_pin">输入新的密码</string>
   <string name="incorrect_pin">密码不正确</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s 秒</string>
   <string name="superuser_granted">已授予“%s”超级用户权限</string>
   <string name="superuser_denied">已拒绝“%s”获取超级用户权限</string>
-  <string name="toast">提示</string>
-  <string name="notification">通知</string>
-  <string name="no_notification">不显示通知</string>
   <string name="developer_warning">\"开发人员警告：\nandroid.permission.ACCESS_SUPERUSER
 在 manifest 中未定义。</string>
   <string name="superuser_description">对所有设备功能和存储的完整权限</string>

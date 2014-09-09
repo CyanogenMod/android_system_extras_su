@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">การร้องขอสิทธิผู้ดูแลจะถูกปฏิเสธใน %s วินาที</string>
   <string name="notifications">การแจ้งเตือน</string>
   <string name="none">ไม่มี</string>
+  <string name="toast">กล่องข้อความ</string>
+  <string name="notification">การแจ้งเตือน</string>
+  <string name="toast_summary">บนหน้าจอ</string>
+  <string name="notification_summary">แถบแจ้งเตือน</string>
   <string name="notifications_summary">จะแสดง %s เมื่อมีการอนุญาตหรือปฏิเสธที่จะให้สิทธิผู้ดูแลระบบ</string>
+  <string name="no_notification">ไม่มีการแจ้งเตือนที่จะแสดง</string>
   <string name="enter_pin">กรอกรหัสผ่าน</string>
   <string name="enter_new_pin">กรอกรหัสผ่านใหม่</string>
   <string name="incorrect_pin">รหัสผ่านผิด</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s วินาที</string>
   <string name="superuser_granted">ให้สิทธิผู้ดูแลระบบแก่ %s</string>
   <string name="superuser_denied">ปฏิเสธคำขอสิทธืผู้ดูแลระบบจาก %s</string>
-  <string name="toast">กล่องข้อความ</string>
-  <string name="notification">การแจ้งเตือน</string>
-  <string name="no_notification">ไม่มีการแจ้งเตือนที่จะแสดง</string>
   <string name="developer_warning">คำเตือนถึงนักพัฒนา:\nandroid.permission.ACCESS_SUPERUSER\nไม่ได้ถูกประกาศไว้ใน manifest</string>
   <string name="superuser_description">ให้การอนุญาตแบบเต็มที่ในการใช้ความสามารถและหน่วยความจำทั้งหมดของอุปกรณ์</string>
   <string name="superuser_description_more">สิทธิผู้ดูแลระบบจะทำให้สามารถเข้าถึงความสามารถและที่เก็บข้อมูลของอุปกรณ์ทั้งหมดได้ ซึ่งรวมถึงความปลอดภัยและการติดต่อกับอุปกรณ์โดยตรงด้วย ดังนั้นการอนุญาตนี้จึงมีความเสี่ยงสูง</string>

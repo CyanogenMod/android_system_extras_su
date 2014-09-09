@@ -46,7 +46,12 @@
   <string name="request_timeout_summary">Superkasutaja taotlused lõpevad ja keelatakse pärast %s sekundit</string>
   <string name="notifications">Teated</string>
   <string name="none">Puudub</string>
+  <string name="toast">Teavitus</string>
+  <string name="notification">Teade</string>
+  <string name="toast_summary">teavitus</string>
+  <string name="notification_summary">teade</string>
   <string name="notifications_summary">%s on näidatud kui rakendusele on lubatud või keelatud Superkasutaja õigused</string>
+  <string name="no_notification">Teadet ei näidata</string>
   <string name="enter_pin">Sisestage PIN</string>
   <string name="enter_new_pin">Sisestage Uus PIN</string>
   <string name="incorrect_pin">Vale PIN</string>
@@ -56,9 +61,6 @@
   <string name="number_seconds">%s sekundit</string>
   <string name="superuser_granted">Superkasutaja lubatud rakendusele %s</string>
   <string name="superuser_denied">Superkasutaja keelatud rakendusele %s</string>
-  <string name="toast">Teavitus</string>
-  <string name="notification">Teade</string>
-  <string name="no_notification">Teadet ei näidata</string>
   <string name="developer_warning">Arendaja Hoiatus:\nandroid.permission.ACCESS_SUPERUSER\nei ole deklareeritud manifestis.</string>
   <string name="superuser_description">täielikud õigused kõigile seadme võimalustele ja mälule</string>
   <string name="superuser_description_more">Superkasutaja lubab täieliku ligipääsu kõigile telefoni võimalustele ja mälule, kaasaarvatud kaitstud ja tundlikud riistvaraosad sinu seadmel. See luba on potentsiaalselt ohtlik.</string>
