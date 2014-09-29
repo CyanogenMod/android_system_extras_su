@@ -48,6 +48,8 @@
   <string name="none">Вимкнені</string>
   <string name="toast">сповіщення</string>
   <string name="notification">сповіщення</string>
+  <string name="toast_summary">спливаюче оповіщення</string>
+  <string name="notification_summary">сповіщення</string>
   <string name="notifications_summary">Буде показано %s коли програма отримує чи ні права Суперкористувача</string>
   <string name="no_notification">Сповіщення вимкнені</string>
   <string name="enter_pin">Введіть PIN-код</string>

@@ -48,6 +48,7 @@
   <string name="none">無</string>
   <string name="toast">彈出訊息 (Toast)</string>
   <string name="notification">通知</string>
+  <string name="toast_summary">彈出通知</string>
   <string name="notification_summary">通知</string>
   <string name="notifications_summary">當應用程式被批准或拒絕取得超級使用者權限後，會顯示%s。</string>
   <string name="no_notification">不會顯示通知</string>
