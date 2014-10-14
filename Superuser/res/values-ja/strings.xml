@@ -31,7 +31,7 @@
   <string name="command_header">コマンド:</string>
   <string name="this_time_only">1回のみ</string>
   <string name="remember_for">%s分間のみ</string>
-  <string name="remember_forever">選択を記憶する</string>
+  <string name="remember_forever">選択を記憶</string>
   <string name="interactive">インタラクティブ</string>
   <string name="logs">ログ</string>
   <string name="settings">設定</string>

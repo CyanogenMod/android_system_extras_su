@@ -17,6 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Superuser</string>
+  <string name="su_allow">Permite</string>
+  <string name="su_allow_countdown">Permite (%1$s)</string>
+  <string name="su_deny">Refuză</string>
   <string name="status_incoming">Cerere superuser de intrare\u2026</string>
   <string name="unknown_uid">UID necunoscut: %s</string>
   <string name="application_request">%s cere acces Superuser.</string>
@@ -45,6 +48,8 @@
   <string name="none">Nimic</string>
   <string name="toast">Alertă</string>
   <string name="notification">Notificare</string>
+  <string name="toast_summary">notificare</string>
+  <string name="notification_summary">notificare</string>
   <string name="notifications_summary">O %s se va afișa când unei aplicații i se acordă sau i se refuză permisiuni de Superuser</string>
   <string name="no_notification">Nici o notificare nu va fi afișată</string>
   <string name="enter_pin">Introduceți PIN</string>
