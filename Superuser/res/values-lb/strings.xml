@@ -17,6 +17,21 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Superuser</string>
+  <string name="su_allow">Erlaben</string>
+  <string name="su_allow_countdown">Erlaben (%1$s)</string>
   <string name="unknown_uid">Onbekannte UID: %s</string>
   <string name="application_request">%s freet no Superuser-Accès.</string>
+  <string name="package_header">Pak:</string>
+  <string name="app_header">App:</string>
+  <string name="this_time_only">Just dës Kéier</string>
+  <string name="remember_for">Choix fir %s Minutte verhalen</string>
+  <string name="remember_forever">Choix dauerhaft verhalen</string>
+  <string name="settings">Astellungen</string>
+  <string name="delete">Läschen</string>
+  <string name="none">Keen</string>
+  <string name="notification">Notifikatioun</string>
+  <string name="enter_pin">PIN aginn</string>
+  <string name="enter_new_pin">Neie PIN aginn</string>
+  <string name="incorrect_pin">Inkorrekte PIN</string>
+  <string name="confirm_pin">PIN confirméieren</string>
 </resources>

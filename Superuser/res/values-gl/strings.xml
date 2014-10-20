@@ -17,6 +17,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="superuser">Superusuario</string>
+  <string name="su_allow">Permitir</string>
+  <string name="su_allow_countdown">Permitir (%1$s)</string>
+  <string name="su_deny">Denegar</string>
   <string name="status_incoming">Solicitude de superusuario\u2026</string>
   <string name="unknown_uid">UID descoñecido: %s</string>
   <string name="application_request">%s está solicitando acceso de superusuario.</string>
@@ -45,6 +48,8 @@
   <string name="none">Ningunha</string>
   <string name="toast">Notificación emerxente</string>
   <string name="notification">Notificación</string>
+  <string name="toast_summary">mensaxe emerxente</string>
+  <string name="notification_summary">notificación</string>
   <string name="notifications_summary">Amosarase unha %s cando se lle permitan ou se lle denegen permisos de superusuario a unha aplicación</string>
   <string name="no_notification">Non se amosarán notificacións</string>
   <string name="enter_pin">Inserir PIN</string>
