@@ -63,7 +63,7 @@
   <string name="superuser_denied">Superuser bol odmietnutý pre %s</string>
   <string name="developer_warning">Varovanie pre vývojara:\nandroid.permission.ACCESS_SUPERUSER\n povolenie nie je deklarované v manifeste.</string>
   <string name="superuser_description">plné povolenia pre všetky funkcie zariadenia a úložisko</string>
-  <string name="superuser_description_more">Superuser povolí plný prístup pre všetky funkcie zariadenia a úložisko, vrátane bezpečnostných a citlivých hardvérových prvkov zariadenia. Toto povolenie je potenciálne nebezpečné.</string>
+  <string name="superuser_description_more">Superuser umožňuje plný prístup pre všetky funkcie zariadenia a úložisko vrátane bezpečnostných a citlivých hardvérových prvkov zariadenia. Toto povolenie je potenciálne nebezpečné.</string>
   <string name="declared_permission">Deklarované povolenie</string>
   <string name="declared_permission_summary">Povoliť len žiadosti od aplikácií, ktoré majú deklarované povolenie android.permission.ACCESS_SUPERUSER</string>
   <string name="automatic_response">Automatická odozva</string>

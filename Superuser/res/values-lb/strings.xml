@@ -19,8 +19,10 @@
   <string name="superuser">Superuser</string>
   <string name="su_allow">Erlaben</string>
   <string name="su_allow_countdown">Erlaben (%1$s)</string>
+  <string name="status_incoming">Superuser-Ufro\u2026</string>
   <string name="unknown_uid">Onbekannte UID: %s</string>
   <string name="application_request">%s freet no Superuser-Accès.</string>
+  <string name="request">Superuser-Ufro</string>
   <string name="package_header">Pak:</string>
   <string name="app_header">App:</string>
   <string name="this_time_only">Just dës Kéier</string>
@@ -34,4 +36,5 @@
   <string name="enter_new_pin">Neie PIN aginn</string>
   <string name="incorrect_pin">Inkorrekte PIN</string>
   <string name="confirm_pin">PIN confirméieren</string>
+  <string name="number_seconds">%s Sekonnen</string>
 </resources>
