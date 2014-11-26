@@ -1,5 +1,6 @@
 # su daemon
 service su_daemon /system/xbin/su --daemon
+    seclabel u:r:sudaemon:s0
     oneshot
 
 on property:persist.sys.root_access=0
@@ -13,3 +14,9 @@ on property:persist.sys.root_access=1
 
 on property:persist.sys.root_access=3
     start su_daemon
+
+on property:init.svc.su_daemon=running
+    mkdir /dev/com.android.settings.daemon 0755 root root
+    restorecon_recursive /dev/com.android.settings.daemon
+    mkdir /dev/com.android.settings 0755 root root
+    restorecon_recursive /dev/com.android.settings
