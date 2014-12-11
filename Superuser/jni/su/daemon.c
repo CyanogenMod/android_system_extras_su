@@ -275,7 +275,24 @@ static int run_daemon_child(int infd, int outfd, int errfd, int argc, char** arg
     return su_main(argc, argv, 0);
 }
 
+static int pid_to_exe(int pid, char *exe) {
+    char path[PATH_MAX];
+    int len;
+
+    snprintf(path, sizeof(path), "/proc/%u/exe", pid);
+    len = readlink(path, exe, sizeof(exe));
+    if (len < 0) {
+        PLOGE("Getting exe path");
+        return -1;
+    }
+    exe[len] = '\0';
+    return 0;
+}
+
 static int daemon_accept(int fd) {
+    char mypath[PATH_MAX], remotepath[PATH_MAX];
+    int caller_is_self = 0;
+
     is_daemon = 1;
     int pid = read_int(fd);
     LOGD("remote pid: %d", pid);
@@ -293,9 +310,15 @@ static int daemon_accept(int fd) {
         LOGE("could obtain credentials from unix domain socket");
         exit(-1);
     }
-    // if the credentials on the other side of the wire are NOT root,
-    // we can't trust anything being sent.
-    if (credentials.uid != 0) {
+
+    if (!pid_to_exe(getpid(),&mypath) &&
+            !pid_to_exe(credentials.pid,&remotepath)) {
+        if (!strncmp(mypath,remotepath,strlen(mypath)))
+            caller_is_self = 1;
+    }
+    // if the credentials on the other side imply that
+    // we're not calling ourselves, we can't trust anything being sent.
+    if (!caller_is_self) {
         daemon_from_uid = credentials.uid;
         pid = credentials.pid;
         daemon_from_pid = credentials.pid;
