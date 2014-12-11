@@ -43,7 +43,7 @@ static int write_blocking(int fd, char *buf, size_t bufsz) {
         ret = write(fd, buf + written, bufsz - written);
         if (ret == -1) return -1;
         written += ret;
-    } while (written < bufsz);
+    } while (written < (ssize_t)bufsz);
 
     return 0;
 }
@@ -106,15 +106,14 @@ static void pump_async(int input, int output) {
  */
 int pts_open(char *slave_name, size_t slave_name_size) {
     int fdm;
-    char *sn_tmp;
+    char sn_tmp[slave_name_size];
 
     // Open master ptmx device
     fdm = open("/dev/ptmx", O_RDWR);
     if (fdm == -1) return -1;
 
     // Get the slave name
-    sn_tmp = ptsname(fdm);
-    if (!sn_tmp) {
+    if (ptsname_r(fdm, sn_tmp, slave_name_size) != 0) {
         close(fdm);
         return -2;
     }
@@ -203,7 +202,7 @@ int restore_stdin(void) {
 }
 
 // Flag indicating whether the sigwinch watcher should terminate.
-volatile static int closing_time = 0;
+static volatile int closing_time = 0;
 
 /**
  * Thread process. Wait for a SIGWINCH to be received, then update 

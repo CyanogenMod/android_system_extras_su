@@ -280,7 +280,7 @@ static int pid_to_exe(int pid, char *exe) {
     int len;
 
     snprintf(path, sizeof(path), "/proc/%u/exe", pid);
-    len = readlink(path, exe, sizeof(exe));
+    len = readlink(path, exe, sizeof(path));
     if (len < 0) {
         PLOGE("Getting exe path");
         return -1;
@@ -311,10 +311,9 @@ static int daemon_accept(int fd) {
         exit(-1);
     }
 
-    if (!pid_to_exe(getpid(),&mypath) &&
-            !pid_to_exe(credentials.pid,&remotepath)) {
-        if (!strncmp(mypath,remotepath,strlen(mypath)))
-            caller_is_self = 1;
+    if (!pid_to_exe(getpid(),mypath) &&
+            !pid_to_exe(credentials.pid,remotepath)) {
+        if (!strncmp(mypath,remotepath,PATH_MAX)) caller_is_self = 1;
     }
     // if the credentials on the other side imply that
     // we're not calling ourselves, we can't trust anything being sent.
@@ -553,7 +552,7 @@ static void setup_sighandlers(void) {
 
 int connect_daemon(int argc, char *argv[], int ppid) {
     int uid = getuid();
-    int ptmx;
+    int ptmx = -1;
     char pts_slave[PATH_MAX];
 
     struct sockaddr_un sun;
