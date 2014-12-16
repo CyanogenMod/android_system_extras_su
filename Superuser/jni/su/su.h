@@ -45,27 +45,6 @@
 #define CM_ROOT_ACCESS_ADB_ONLY      2
 #define CM_ROOT_ACCESS_APPS_AND_ADB  3
 
-// DO NOT CHANGE LINE BELOW, java package name will always be the same
-#define JAVA_PACKAGE_NAME "com.koushikdutta.superuser"
-
-// If --rename-manifest-package is used in AAPT, this
-// must be changed to correspond to the new APK package name
-// See the two Android.mk files for more details.
-#ifndef REQUESTOR
-#define REQUESTOR JAVA_PACKAGE_NAME
-#endif
-// This is used if wrapping the fragment classes and activities
-// with classes in another package. CM requirement.
-#ifndef REQUESTOR_PREFIX
-#define REQUESTOR_PREFIX JAVA_PACKAGE_NAME
-#endif
-#define REQUESTOR_DATA_PATH "/data/data/"
-#define REQUESTOR_FILES_PATH REQUESTOR_DATA_PATH REQUESTOR "/files"
-#define REQUESTOR_USER_PATH "/data/user/"
-#define REQUESTOR_CACHE_PATH "/dev/" REQUESTOR
-#define REQUESTOR_DAEMON_PATH REQUESTOR_CACHE_PATH ".daemon"
-#define REQUESTOR_MULTIUSER_MODE REQUESTOR_FILES_PATH "/multiuser_mode"
-
 #define DEFAULT_SHELL "/system/bin/sh"
 
 #define xstr(a) str(a)
@@ -74,7 +53,7 @@
 #ifndef VERSION_CODE
 #define VERSION_CODE 16
 #endif
-#define VERSION xstr(VERSION_CODE) " " REQUESTOR
+#define VERSION xstr(VERSION_CODE) " cm-su"
 
 #define PROTO_VERSION 1
 
@@ -99,43 +78,12 @@ struct su_request {
     int optind;
 };
 
-struct su_user_info {
-    // the user in android userspace (multiuser)
-    // that invoked this action.
-    unsigned android_user_id;
-    // how su behaves with multiuser. see enum below.
-    int multiuser_mode;
-    // path to superuser directory. this is populated according
-    // to the multiuser mode.
-    // this is used to check uid/gid for protecting socket.
-    // this is used instead of database, as it is more likely
-    // to exist. db will not exist if su has never launched.
-    char base_path[PATH_MAX];
-};
-
 struct su_context {
     struct su_initiator from;
     struct su_request to;
-    struct su_user_info user;
     mode_t umask;
     char sock_path[PATH_MAX];
 };
-
-// multiuser su behavior
-typedef enum {
-  // only owner can su
-  MULTIUSER_MODE_OWNER_ONLY = 0,
-  // owner gets a su prompt
-  MULTIUSER_MODE_OWNER_MANAGED = 1,
-  // user gets a su prompt
-  MULTIUSER_MODE_USER = 2,
-  MULTIUSER_MODE_NONE = 3,
-} multiuser_mode_t;
-
-#define MULTIUSER_VALUE_OWNER_ONLY    "owner"
-#define MULTIUSER_VALUE_OWNER_MANAGED "managed"
-#define MULTIUSER_VALUE_USER          "user"
-#define MULTIUSER_VALUE_NONE          "none"
 
 typedef enum {
     INTERACTIVE = 0,

@@ -33,7 +33,7 @@
 #include <sys/stat.h>
 #include <stdarg.h>
 #include <sys/types.h>
-#include <utils/Log.h>
+#include <log/log.h>
 
 #include "su.h"
 #include "utils.h"
@@ -84,33 +84,6 @@ int fork_zero_fucks() {
             exit(0);
         return 0;
     }
-}
-
-void exec_log(int priority, const char* fmt, ...) {
-    static int log_fd = -1;
-    struct iovec vec[3];
-    va_list args;
-    char msg[PATH_MAX];
-
-    if (log_fd < 0) {
-        log_fd = open("/dev/log/main", O_WRONLY);
-        if (log_fd < 0) {
-            return;
-        }
-    }
-
-    va_start(args, fmt);
-    vsnprintf(msg, PATH_MAX, fmt, args);
-    va_end(args);
-
-    vec[0].iov_base   = (unsigned char *) &priority;
-    vec[0].iov_len    = 1;
-    vec[1].iov_base   = (void *) LOG_TAG;
-    vec[1].iov_len    = strlen(LOG_TAG) + 1;
-    vec[2].iov_base   = (void *) msg;
-    vec[2].iov_len    = strlen(msg) + 1;
-
-    writev(log_fd, vec, 3);
 }
 
 static int from_init(struct su_initiator *from) {
@@ -188,52 +161,6 @@ static int from_init(struct su_initiator *from) {
     return 0;
 }
 
-static int get_multiuser_mode() {
-    char *data;
-    char sdk_ver[PROPERTY_VALUE_MAX];
-
-    data = read_file("/system/build.prop");
-    get_property(data, sdk_ver, "ro.build.version.sdk", "0");
-    free(data);
-
-    int sdk = atoi(sdk_ver);
-    if (sdk < 17)
-        return MULTIUSER_MODE_NONE;
-
-    int ret = MULTIUSER_MODE_OWNER_ONLY;
-    char mode[12];
-    FILE *fp;
-    if ((fp = fopen(REQUESTOR_MULTIUSER_MODE, "r"))) {
-        fgets(mode, sizeof(mode), fp);
-        int last = strlen(mode) - 1;
-        if (mode[last] == '\n')
-            mode[last] = '\0';
-        if (strcmp(mode, MULTIUSER_VALUE_USER) == 0) {
-            ret = MULTIUSER_MODE_USER;
-        } else if (strcmp(mode, MULTIUSER_VALUE_OWNER_MANAGED) == 0) {
-            ret = MULTIUSER_MODE_OWNER_MANAGED;
-        }
-        else {
-            ret = MULTIUSER_MODE_OWNER_ONLY;
-        }
-        fclose(fp);
-    }
-    return ret;
-}
-
-static void read_options(struct su_context *ctx) {
-    ctx->user.multiuser_mode = get_multiuser_mode();
-}
-
-static void user_init(struct su_context *ctx) {
-    if (ctx->from.uid > 99999) {
-        ctx->user.android_user_id = ctx->from.uid / 100000;
-        if (ctx->user.multiuser_mode == MULTIUSER_MODE_USER) {
-            snprintf(ctx->user.base_path, PATH_MAX, "%s/%d/%s", REQUESTOR_USER_PATH, ctx->user.android_user_id, REQUESTOR);
-        }
-    }
-}
-
 static void populate_environment(const struct su_context *ctx) {
     struct passwd *pw;
 
@@ -286,7 +213,6 @@ static void usage(int status) {
     "  -m, -p,\n"
     "  --preserve-environment        do not change environment variables\n"
     "  -s, --shell SHELL             use SHELL instead of the default " DEFAULT_SHELL "\n"
-    "  -u                            display the multiuser mode and exit\n"
     "  -v, --version                 display version number and exit\n"
     "  -V                            display version code and exit,\n"
     "                                this is used almost exclusively by Superuser.apk\n");
@@ -532,11 +458,6 @@ int su_main(int argc, char *argv[], int need_client) {
             .optind = 0,
             .name = "",
         },
-        .user = {
-            .android_user_id = 0,
-            .multiuser_mode = MULTIUSER_MODE_OWNER_ONLY,
-            .base_path = REQUESTOR_DATA_PATH REQUESTOR
-        },
     };
     struct stat st;
     int c, socket_serv_fd, fd;
@@ -552,7 +473,7 @@ int su_main(int argc, char *argv[], int need_client) {
         { NULL, 0, NULL, 0 },
     };
 
-    while ((c = getopt_long(argc, argv, "+c:hlmps:Vvu", long_opts, NULL)) != -1) {
+    while ((c = getopt_long(argc, argv, "+c:hlmps:Vv", long_opts, NULL)) != -1) {
         switch(c) {
         case 'c':
             ctx.to.shell = DEFAULT_SHELL;
@@ -576,22 +497,6 @@ int su_main(int argc, char *argv[], int need_client) {
             exit(EXIT_SUCCESS);
         case 'v':
             printf("%s\n", VERSION);
-            exit(EXIT_SUCCESS);
-        case 'u':
-            switch (get_multiuser_mode()) {
-            case MULTIUSER_MODE_USER:
-                printf("%s\n", MULTIUSER_VALUE_USER);
-                break;
-            case MULTIUSER_MODE_OWNER_MANAGED:
-                printf("%s\n", MULTIUSER_VALUE_OWNER_MANAGED);
-                break;
-            case MULTIUSER_MODE_OWNER_ONLY:
-                printf("%s\n", MULTIUSER_VALUE_OWNER_ONLY);
-                break;
-            case MULTIUSER_MODE_NONE:
-                printf("%s\n", MULTIUSER_VALUE_NONE);
-                break;
-            }
             exit(EXIT_SUCCESS);
         default:
             /* Bionic getopt_long doesn't terminate its error output by newline */
@@ -648,31 +553,12 @@ int su_main(int argc, char *argv[], int need_client) {
         deny(&ctx);
     }
 
-    read_options(&ctx);
-    user_init(&ctx);
-
     ALOGE("SU from: %s", ctx.from.name);
 
     // the latter two are necessary for stock ROMs like note 2 which do dumb things with su, or crash otherwise
     if (ctx.from.uid == AID_ROOT) {
         ALOGD("Allowing root/system/radio.");
         allow(&ctx);
-    }
-
-    // verify superuser is installed
-    if (stat(ctx.user.base_path, &st) < 0) {
-        // send to market (disabled, because people are and think this is hijacking their su)
-        // if (0 == strcmp(JAVA_PACKAGE_NAME, REQUESTOR))
-        //     silent_run("am start -d http://www.clockworkmod.com/superuser/install.html -a android.intent.action.VIEW");
-        PLOGE("stat %s", ctx.user.base_path);
-        deny(&ctx);
-    }
-
-    // odd perms on superuser data dir
-    if (st.st_gid != st.st_uid) {
-        ALOGE("Bad uid/gid %d/%d for Superuser Requestor application",
-                (int)st.st_uid, (int)st.st_gid);
-        deny(&ctx);
     }
 
     // always allow if this is the superuser uid
@@ -691,11 +577,6 @@ int su_main(int argc, char *argv[], int need_client) {
     if (ctx.from.uid == AID_SHELL) {
         ALOGD("Allowing shell.");
         allow(&ctx);
-    }
-
-    // deny if this is a non owner request and owner mode only
-    if (ctx.user.multiuser_mode == MULTIUSER_MODE_OWNER_ONLY && ctx.user.android_user_id != 0) {
-        deny(&ctx);
     }
 
     if (!check_appops(ctx.from.uid, resolve_package_name(ctx.from.uid))) {
