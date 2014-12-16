@@ -144,8 +144,6 @@ typedef enum {
 } policy_t;
 
 extern void set_identity(unsigned int uid);
-extern int send_request(struct su_context *ctx);
-extern int send_result(struct su_context *ctx, policy_t policy);
 
 static inline char *get_command(const struct su_request *to)
 {

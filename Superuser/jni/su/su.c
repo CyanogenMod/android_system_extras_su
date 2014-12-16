@@ -295,20 +295,6 @@ static void usage(int status) {
 
 static __attribute__ ((noreturn)) void deny(struct su_context *ctx) {
     char *cmd = get_command(&ctx->to);
-
-    int send_to_app = 1;
-
-    // no need to log if called by root
-    if (ctx->from.uid == AID_ROOT)
-        send_to_app = 0;
-
-    // dumpstate (which logs to logcat/shell) will spam the crap out of the system with su calls
-    if (strcmp("/system/bin/dumpstate", ctx->from.bin) == 0)
-        send_to_app = 0;
-
-    if (send_to_app)
-        send_result(ctx, DENY);
-
     LOGW("request rejected (%u->%u %s)", ctx->from.uid, ctx->to.uid, cmd);
     fprintf(stderr, "%s\n", strerror(EACCES));
     exit(EXIT_FAILURE);
@@ -319,18 +305,6 @@ static __attribute__ ((noreturn)) void allow(struct su_context *ctx) {
     int argc, err;
 
     umask(ctx->umask);
-    int send_to_app = 1;
-
-    // no need to log if called by root
-    if (ctx->from.uid == AID_ROOT)
-        send_to_app = 0;
-
-    // dumpstate (which logs to logcat/shell) will spam the crap out of the system with su calls
-    if (strcmp("/system/bin/dumpstate", ctx->from.bin) == 0)
-        send_to_app = 0;
-
-    if (send_to_app)
-        send_result(ctx, ALLOW);
 
     char *binary;
     argc = ctx->to.optind;

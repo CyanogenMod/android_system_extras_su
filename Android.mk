@@ -21,7 +21,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 LOCAL_WHOLE_STATIC_LIBRARIES := libc libcutils libutils libbinder liblog
 LOCAL_C_INCLUDES := external/sqlite/dist
-LOCAL_SRC_FILES := Superuser/jni/su/su.c Superuser/jni/su/daemon.c Superuser/jni/su/activity.c Superuser/jni/su/utils.c Superuser/jni/su/pts.c
+LOCAL_SRC_FILES := Superuser/jni/su/su.c Superuser/jni/su/daemon.c Superuser/jni/su/utils.c Superuser/jni/su/pts.c
 LOCAL_SRC_FILES += Superuser/jni/su/binder/appops-wrapper.cpp Superuser/jni/su/binder/pm-wrapper.c
 LOCAL_CFLAGS := -DSQLITE_OMIT_LOAD_EXTENSION -DREQUESTOR=\"$(SUPERUSER_PACKAGE)\"
 
