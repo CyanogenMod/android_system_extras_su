@@ -45,6 +45,8 @@
 #define CM_ROOT_ACCESS_ADB_ONLY      2
 #define CM_ROOT_ACCESS_APPS_AND_ADB  3
 
+#define DAEMON_SOCKET_PATH "/dev/socket/su-daemon/"
+
 #define DEFAULT_SHELL "/system/bin/sh"
 
 #define xstr(a) str(a)
