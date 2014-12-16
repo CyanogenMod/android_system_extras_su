@@ -33,13 +33,17 @@
 #include <sys/stat.h>
 #include <stdarg.h>
 #include <sys/types.h>
+#include <utils/Log.h>
 
 #include "su.h"
 #include "utils.h"
+#include "binder/pm-wrapper.h"
 
 extern int is_daemon;
 extern int daemon_from_uid;
 extern int daemon_from_pid;
+
+int check_appops(int uid, const char *pkgName);
 
 unsigned get_shell_uid() {
   struct passwd* ppwd = getpwnam("shell");
@@ -828,6 +832,8 @@ int su_main(int argc, char *argv[], int need_client) {
     read_options(&ctx);
     user_init(&ctx);
 
+    ALOGE("SU from: %s", ctx.from.name);
+
     // the latter two are necessary for stock ROMs like note 2 which do dumb things with su, or crash otherwise
     if (ctx.from.uid == AID_ROOT) {
         LOGD("Allowing root/system/radio.");
@@ -865,6 +871,11 @@ int su_main(int argc, char *argv[], int need_client) {
     // autogrant shell at this point
     if (ctx.from.uid == AID_SHELL) {
         LOGD("Allowing shell.");
+        allow(&ctx);
+    }
+
+    if (!check_appops(ctx.from.uid, resolve_package_name(ctx.from.uid))) {
+        LOGD("Allowing via appops.");
         allow(&ctx);
     }
 
