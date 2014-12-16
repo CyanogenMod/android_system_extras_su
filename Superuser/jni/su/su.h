@@ -64,11 +64,6 @@
 #define REQUESTOR_USER_PATH "/data/user/"
 #define REQUESTOR_CACHE_PATH "/dev/" REQUESTOR
 #define REQUESTOR_DAEMON_PATH REQUESTOR_CACHE_PATH ".daemon"
-
-// there's no guarantee that the db or files are actually created named as such by
-// SQLiteOpenHelper, etc. Though that is the behavior as of current.
-// it is up to the Android application to symlink as appropriate.
-#define REQUESTOR_DATABASE_PATH REQUESTOR "/databases/su.sqlite"
 #define REQUESTOR_MULTIUSER_MODE REQUESTOR_FILES_PATH "/multiuser_mode"
 
 #define DEFAULT_SHELL "/system/bin/sh"
@@ -116,9 +111,6 @@ struct su_user_info {
     // this is used instead of database, as it is more likely
     // to exist. db will not exist if su has never launched.
     char base_path[PATH_MAX];
-    // path to su database. this is populated according
-    // to the multiuser mode.
-    char database_path[PATH_MAX];
 };
 
 struct su_context {
@@ -151,7 +143,6 @@ typedef enum {
     ALLOW = 2,
 } policy_t;
 
-extern policy_t database_check(struct su_context *ctx);
 extern void set_identity(unsigned int uid);
 extern int send_request(struct su_context *ctx);
 extern int send_result(struct su_context *ctx, policy_t policy);

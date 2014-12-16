@@ -229,7 +229,6 @@ static void user_init(struct su_context *ctx) {
     if (ctx->from.uid > 99999) {
         ctx->user.android_user_id = ctx->from.uid / 100000;
         if (ctx->user.multiuser_mode == MULTIUSER_MODE_USER) {
-            snprintf(ctx->user.database_path, PATH_MAX, "%s/%d/%s", REQUESTOR_USER_PATH, ctx->user.android_user_id, REQUESTOR_DATABASE_PATH);
             snprintf(ctx->user.base_path, PATH_MAX, "%s/%d/%s", REQUESTOR_USER_PATH, ctx->user.android_user_id, REQUESTOR);
         }
     }
@@ -272,158 +271,6 @@ void set_identity(unsigned int uid) {
         PLOGE("setresuid (%u)", uid);
         exit(EXIT_FAILURE);
     }
-}
-
-static void socket_cleanup(struct su_context *ctx) {
-    if (ctx && ctx->sock_path[0]) {
-        if (unlink(ctx->sock_path))
-            PLOGE("unlink (%s)", ctx->sock_path);
-        ctx->sock_path[0] = 0;
-    }
-}
-
-/*
- * For use in signal handlers/atexit-function
- * NOTE: su_ctx points to main's local variable.
- *       It's OK due to the program uses exit(3), not return from main()
- */
-static struct su_context *su_ctx = NULL;
-
-static void cleanup(void) {
-    socket_cleanup(su_ctx);
-}
-
-static void cleanup_signal(int sig) {
-    socket_cleanup(su_ctx);
-    exit(128 + sig);
-}
-
-static int socket_create_temp(char *path, size_t len) {
-    int fd;
-    struct sockaddr_un sun;
-
-    fd = socket(AF_LOCAL, SOCK_STREAM, 0);
-    if (fd < 0) {
-        PLOGE("socket");
-        return -1;
-    }
-    if (fcntl(fd, F_SETFD, FD_CLOEXEC)) {
-        PLOGE("fcntl FD_CLOEXEC");
-        goto err;
-    }
-
-    memset(&sun, 0, sizeof(sun));
-    sun.sun_family = AF_LOCAL;
-    snprintf(path, len, "%s/.socket%d", REQUESTOR_CACHE_PATH, getpid());
-    memset(sun.sun_path, 0, sizeof(sun.sun_path));
-    snprintf(sun.sun_path, sizeof(sun.sun_path), "%s", path);
-
-    /*
-     * Delete the socket to protect from situations when
-     * something bad occured previously and the kernel reused pid from that process.
-     * Small probability, isn't it.
-     */
-    unlink(sun.sun_path);
-
-    if (bind(fd, (struct sockaddr*)&sun, sizeof(sun)) < 0) {
-        PLOGE("bind");
-        goto err;
-    }
-
-    if (listen(fd, 1) < 0) {
-        PLOGE("listen");
-        goto err;
-    }
-
-    return fd;
-err:
-    close(fd);
-    return -1;
-}
-
-static int socket_accept(int serv_fd) {
-    struct timeval tv;
-    fd_set fds;
-    int fd, rc;
-
-    /* Wait 20 seconds for a connection, then give up. */
-    tv.tv_sec = 20;
-    tv.tv_usec = 0;
-    FD_ZERO(&fds);
-    FD_SET(serv_fd, &fds);
-    do {
-        rc = select(serv_fd + 1, &fds, NULL, NULL, &tv);
-    } while (rc < 0 && errno == EINTR);
-    if (rc < 1) {
-        PLOGE("select");
-        return -1;
-    }
-
-    fd = accept(serv_fd, NULL, NULL);
-    if (fd < 0) {
-        PLOGE("accept");
-        return -1;
-    }
-
-    return fd;
-}
-
-static int socket_send_request(int fd, const struct su_context *ctx) {
-#define write_data(fd, data, data_len)              \
-do {                                                \
-    size_t __len = htonl(data_len);                 \
-    __len = write((fd), &__len, sizeof(__len));     \
-    if (__len != sizeof(__len)) {                   \
-        PLOGE("write(" #data ")");                  \
-        return -1;                                  \
-    }                                               \
-    __len = write((fd), data, data_len);            \
-    if (__len != data_len) {                        \
-        PLOGE("write(" #data ")");                  \
-        return -1;                                  \
-    }                                               \
-} while (0)
-
-#define write_string_data(fd, name, data)        \
-do {                                        \
-    write_data(fd, name, strlen(name));     \
-    write_data(fd, data, strlen(data));     \
-} while (0)
-
-// stringify everything.
-#define write_token(fd, name, data)         \
-do {                                        \
-    char buf[16];                           \
-    snprintf(buf, sizeof(buf), "%d", data); \
-    write_string_data(fd, name, buf);            \
-} while (0)
-
-    write_token(fd, "version", PROTO_VERSION);
-    write_token(fd, "binary.version", VERSION_CODE);
-    write_token(fd, "pid", ctx->from.pid);
-    write_string_data(fd, "from.name", ctx->from.name);
-    write_string_data(fd, "to.name", ctx->to.name);
-    write_token(fd, "from.uid", ctx->from.uid);
-    write_token(fd, "to.uid", ctx->to.uid);
-    write_string_data(fd, "from.bin", ctx->from.bin);
-    // TODO: Fix issue where not using -c does not result a in a command
-    write_string_data(fd, "command", get_command(&ctx->to));
-    write_token(fd, "eof", PROTO_VERSION);
-    return 0;
-}
-
-static int socket_receive_result(int fd, char *result, ssize_t result_len) {
-    ssize_t len;
-
-    LOGV("waiting for user");
-    len = read(fd, result, result_len-1);
-    if (len < 0) {
-        PLOGE("read(result)");
-        return -1;
-    }
-    result[len] = '\0';
-
-    return 0;
 }
 
 static void usage(int status) {
@@ -714,7 +561,6 @@ int su_main(int argc, char *argv[], int need_client) {
         .user = {
             .android_user_id = 0,
             .multiuser_mode = MULTIUSER_MODE_OWNER_ONLY,
-            .database_path = REQUESTOR_DATA_PATH REQUESTOR_DATABASE_PATH,
             .base_path = REQUESTOR_DATA_PATH REQUESTOR
         },
     };
@@ -824,7 +670,6 @@ int su_main(int argc, char *argv[], int need_client) {
     }
     ctx.to.optind = optind;
 
-    su_ctx = &ctx;
     if (from_init(&ctx.from) < 0) {
         deny(&ctx);
     }
@@ -874,98 +719,16 @@ int su_main(int argc, char *argv[], int need_client) {
         allow(&ctx);
     }
 
-    if (!check_appops(ctx.from.uid, resolve_package_name(ctx.from.uid))) {
-        LOGD("Allowing via appops.");
-        allow(&ctx);
-    }
-
     // deny if this is a non owner request and owner mode only
     if (ctx.user.multiuser_mode == MULTIUSER_MODE_OWNER_ONLY && ctx.user.android_user_id != 0) {
         deny(&ctx);
     }
 
-    ctx.umask = umask(027);
-
-    int ret = mkdir(REQUESTOR_CACHE_PATH, 0770);
-    if (chown(REQUESTOR_CACHE_PATH, st.st_uid, st.st_gid)) {
-        PLOGE("chown (%s, %ld, %ld)", REQUESTOR_CACHE_PATH, st.st_uid, st.st_gid);
-        deny(&ctx);
-    }
-
-    if (setgroups(0, NULL)) {
-        PLOGE("setgroups");
-        deny(&ctx);
-    }
-    if (setegid(st.st_gid)) {
-        PLOGE("setegid (%lu)", st.st_gid);
-        deny(&ctx);
-    }
-    if (seteuid(st.st_uid)) {
-        PLOGE("seteuid (%lu)", st.st_uid);
-        deny(&ctx);
-    }
-
-    dballow = database_check(&ctx);
-    switch (dballow) {
-        case INTERACTIVE:
-            break;
-        case ALLOW:
-            LOGD("db allowed");
-            allow(&ctx);    /* never returns */
-        case DENY:
-        default:
-            LOGD("db denied");
-            deny(&ctx);        /* never returns too */
-    }
-
-    socket_serv_fd = socket_create_temp(ctx.sock_path, sizeof(ctx.sock_path));
-    LOGD(ctx.sock_path);
-    if (socket_serv_fd < 0) {
-        deny(&ctx);
-    }
-
-    signal(SIGHUP, cleanup_signal);
-    signal(SIGPIPE, cleanup_signal);
-    signal(SIGTERM, cleanup_signal);
-    signal(SIGQUIT, cleanup_signal);
-    signal(SIGINT, cleanup_signal);
-    signal(SIGABRT, cleanup_signal);
-
-    if (send_request(&ctx) < 0) {
-        deny(&ctx);
-    }
-
-    atexit(cleanup);
-
-    fd = socket_accept(socket_serv_fd);
-    if (fd < 0) {
-        deny(&ctx);
-    }
-    if (socket_send_request(fd, &ctx)) {
-        deny(&ctx);
-    }
-    if (socket_receive_result(fd, buf, sizeof(buf))) {
-        deny(&ctx);
-    }
-
-    close(fd);
-    close(socket_serv_fd);
-    socket_cleanup(&ctx);
-
-    result = buf;
-
-#define SOCKET_RESPONSE    "socket:"
-    if (strncmp(result, SOCKET_RESPONSE, sizeof(SOCKET_RESPONSE) - 1))
-        LOGW("SECURITY RISK: Requestor still receives credentials in intent");
-    else
-        result += sizeof(SOCKET_RESPONSE) - 1;
-
-    if (!strcmp(result, "DENY")) {
-        deny(&ctx);
-    } else if (!strcmp(result, "ALLOW")) {
+    if (!check_appops(ctx.from.uid, resolve_package_name(ctx.from.uid))) {
+        LOGD("Allowing via appops.");
         allow(&ctx);
-    } else {
-        LOGE("unknown response from Superuser Requestor: %s", result);
-        deny(&ctx);
     }
+
+    LOGE("Allow chain exhausted, denying request");
+    deny(&ctx);
 }
