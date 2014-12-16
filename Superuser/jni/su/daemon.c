@@ -40,6 +40,7 @@
 #include <termios.h>
 #include <signal.h>
 #include <string.h>
+#include <log/log.h>
 
 #ifdef SUPERUSER_EMBEDDED
 #include <cutils/multiuser.h>
@@ -108,7 +109,7 @@ static int recv_fd(int sockfd) {
         cmsg->cmsg_level != SOL_SOCKET            ||
         cmsg->cmsg_type  != SCM_RIGHTS) {
 error:
-        LOGE("unable to read fd");
+        ALOGE("unable to read fd");
         exit(-1);
     }
 
@@ -171,7 +172,7 @@ static int read_int(int fd) {
     int val;
     int len = read(fd, &val, sizeof(int));
     if (len != sizeof(int)) {
-        LOGE("unable to read int: %d", len);
+        ALOGE("unable to read int: %d", len);
         exit(-1);
     }
     return val;
@@ -188,18 +189,18 @@ static void write_int(int fd, int val) {
 static char* read_string(int fd) {
     int len = read_int(fd);
     if (len > PATH_MAX || len < 0) {
-        LOGE("invalid string length %d", len);
+        ALOGE("invalid string length %d", len);
         exit(-1);
     }
     char* val = malloc(sizeof(char) * (len + 1));
     if (val == NULL) {
-        LOGE("unable to malloc string");
+        ALOGE("unable to malloc string");
         exit(-1);
     }
     val[len] = '\0';
     int amount = read(fd, val, len);
     if (amount != len) {
-        LOGE("unable to read string");
+        ALOGE("unable to read string");
         exit(-1);
     }
     return val;
@@ -295,19 +296,19 @@ static int daemon_accept(int fd) {
 
     is_daemon = 1;
     int pid = read_int(fd);
-    LOGD("remote pid: %d", pid);
+    ALOGD("remote pid: %d", pid);
     char *pts_slave = read_string(fd);
-    LOGD("remote pts_slave: %s", pts_slave);
+    ALOGD("remote pts_slave: %s", pts_slave);
     daemon_from_uid = read_int(fd);
-    LOGV("remote uid: %d", daemon_from_uid);
+    ALOGV("remote uid: %d", daemon_from_uid);
     daemon_from_pid = read_int(fd);
-    LOGV("remote req pid: %d", daemon_from_pid);
+    ALOGV("remote req pid: %d", daemon_from_pid);
 
     struct ucred credentials;
     int ucred_length = sizeof(struct ucred);
     /* fill in the user data structure */
     if(getsockopt(fd, SOL_SOCKET, SO_PEERCRED, &credentials, &ucred_length)) {
-        LOGE("could obtain credentials from unix domain socket");
+        ALOGE("could obtain credentials from unix domain socket");
         exit(-1);
     }
 
@@ -331,10 +332,10 @@ static int daemon_accept(int fd) {
 
     int argc = read_int(fd);
     if (argc < 0 || argc > 512) {
-        LOGE("unable to allocate args: %d", argc);
+        ALOGE("unable to allocate args: %d", argc);
         exit(-1);
     }
-    LOGV("remote args: %d", argc);
+    ALOGV("remote args: %d", argc);
     char** argv = (char**)malloc(sizeof(char*) * (argc + 1));
     argv[argc] = NULL;
     int i;
@@ -364,7 +365,7 @@ static int daemon_accept(int fd) {
 
         free(pts_slave);
 
-        LOGD("waiting for child exit");
+        ALOGD("waiting for child exit");
         if (waitpid(child, &status, 0) > 0) {
             code = WEXITSTATUS(status);
         }
@@ -373,13 +374,13 @@ static int daemon_accept(int fd) {
         }
 
         // Pass the return code back to the client
-        LOGD("sending code");
+        ALOGD("sending code");
         if (write(fd, &code, sizeof(int)) != sizeof(int)) {
             PLOGE("unable to write exit code");
         }
 
         close(fd);
-        LOGD("child exited");
+        ALOGD("child exited");
         return code;
     }
 
@@ -404,15 +405,15 @@ static int daemon_accept(int fd) {
         }
 
         if (infd < 0)  {
-            LOGD("daemon: stdin using PTY");
+            ALOGD("daemon: stdin using PTY");
             infd  = ptsfd;
         }
         if (outfd < 0) {
-            LOGD("daemon: stdout using PTY");
+            ALOGD("daemon: stdout using PTY");
             outfd = ptsfd;
         }
         if (errfd < 0) {
-            LOGD("daemon: stderr using PTY");
+            ALOGD("daemon: stderr using PTY");
             errfd = ptsfd;
         }
     } else {
@@ -491,7 +492,7 @@ int run_daemon() {
         }
     }
 
-    LOGE("daemon exiting");
+    ALOGE("daemon exiting");
 err:
     close(fd);
     return -1;
@@ -577,7 +578,7 @@ int connect_daemon(int argc, char *argv[], int ppid) {
         exit(-1);
     }
 
-    LOGV("connecting client %d", getpid());
+    ALOGV("connecting client %d", getpid());
 
     int mount_storage = getenv("MOUNT_EMULATED_STORAGE") != NULL;
 
@@ -665,7 +666,7 @@ int connect_daemon(int argc, char *argv[], int ppid) {
     // Get the exit code
     int code = read_int(socketfd);
     close(socketfd);
-    LOGD("client exited %d", code);
+    ALOGD("client exited %d", code);
 
     return code;
 }
