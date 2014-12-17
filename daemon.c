@@ -42,9 +42,7 @@
 #include <string.h>
 #include <log/log.h>
 
-#ifdef SUPERUSER_EMBEDDED
 #include <cutils/multiuser.h>
-#endif
 
 #include "su.h"
 #include "utils.h"
@@ -216,7 +214,6 @@ static void write_string(int fd, char* val) {
     }
 }
 
-#ifdef SUPERUSER_EMBEDDED
 static void mount_emulated_storage(int user_id) {
     const char *emulated_source = getenv("EMULATED_STORAGE_SOURCE");
     const char *emulated_target = getenv("EMULATED_STORAGE_TARGET");
@@ -251,7 +248,6 @@ static void mount_emulated_storage(int user_id) {
         PLOGE("mount legacy path");
     }
 }
-#endif
 
 static int run_daemon_child(int infd, int outfd, int errfd, int argc, char** argv) {
     if (-1 == dup2(outfd, STDOUT_FILENO)) {
@@ -423,11 +419,9 @@ static int daemon_accept(int fd) {
     }
     free(pts_slave);
 
-#ifdef SUPERUSER_EMBEDDED
     if (mount_storage) {
         mount_emulated_storage(multiuser_get_user_id(daemon_from_uid));
     }
-#endif
 
     return run_daemon_child(infd, outfd, errfd, argc, argv);
 }
