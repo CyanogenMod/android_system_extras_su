@@ -10,6 +10,7 @@ LOCAL_FORCE_STATIC_EXECUTABLE := true
 LOCAL_WHOLE_STATIC_LIBRARIES := libc libcutils libutils libbinder liblog
 LOCAL_SRC_FILES := su.c daemon.c utils.c pts.c
 LOCAL_SRC_FILES += binder/appops-wrapper.cpp binder/pm-wrapper.c
+LOCAL_CFLAGS += -Werror
 LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
 include $(BUILD_EXECUTABLE)
 
