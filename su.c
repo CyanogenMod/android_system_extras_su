@@ -43,8 +43,6 @@ extern int is_daemon;
 extern int daemon_from_uid;
 extern int daemon_from_pid;
 
-int check_appops(int uid, const char *pkgName);
-
 unsigned get_shell_uid() {
   struct passwd* ppwd = getpwnam("shell");
   if (NULL == ppwd) {
@@ -226,7 +224,7 @@ static __attribute__ ((noreturn)) void deny(struct su_context *ctx) {
     exit(EXIT_FAILURE);
 }
 
-static __attribute__ ((noreturn)) void allow(struct su_context *ctx) {
+static __attribute__ ((noreturn)) void allow(struct su_context *ctx, const char *packageName) {
     char *arg0;
     int argc, err;
 
@@ -279,11 +277,24 @@ static __attribute__ ((noreturn)) void allow(struct su_context *ctx) {
             (ctx->to.optind + 6 < ctx->to.argc) ? " ..." : "");
 
     ctx->to.argv[--argc] = arg0;
-    execvp(binary, ctx->to.argv + argc);
-    err = errno;
-    PLOGE("exec");
-    fprintf(stderr, "Cannot execute %s: %s\n", binary, strerror(err));
-    exit(EXIT_FAILURE);
+
+    int pid = fork();
+    if (!pid) {
+        execvp(binary, ctx->to.argv + argc);
+        err = errno;
+        PLOGE("exec");
+        fprintf(stderr, "Cannot execute %s: %s\n", binary, strerror(err));
+        exit(EXIT_FAILURE);
+    } else {
+        int status;
+
+        ALOGD("Waiting for pid %d.", pid);
+        waitpid(pid, &status, 0);
+        if (packageName) {
+            appops_finish_op_su(ctx->from.uid, packageName);
+        }
+        exit(status);
+    }
 }
 
 /*
@@ -554,13 +565,13 @@ int su_main(int argc, char *argv[], int need_client) {
     // the latter two are necessary for stock ROMs like note 2 which do dumb things with su, or crash otherwise
     if (ctx.from.uid == AID_ROOT) {
         ALOGD("Allowing root/system/radio.");
-        allow(&ctx);
+        allow(&ctx, NULL);
     }
 
     // always allow if this is the superuser uid
     // superuser needs to be able to reenable itself when disabled...
     if (ctx.from.uid == st.st_uid) {
-        allow(&ctx);
+        allow(&ctx, NULL);
     }
 
     // check if superuser is disabled completely
@@ -572,12 +583,13 @@ int su_main(int argc, char *argv[], int need_client) {
     // autogrant shell at this point
     if (ctx.from.uid == AID_SHELL) {
         ALOGD("Allowing shell.");
-        allow(&ctx);
+        allow(&ctx, NULL);
     }
 
-    if (!check_appops(ctx.from.uid, resolve_package_name(ctx.from.uid))) {
+    const char *packageName = resolve_package_name(ctx.from.uid);
+    if (!appops_start_op_su(ctx.from.uid, packageName)) {
         ALOGD("Allowing via appops.");
-        allow(&ctx);
+        allow(&ctx, packageName);
     }
 
     ALOGE("Allow chain exhausted, denying request");

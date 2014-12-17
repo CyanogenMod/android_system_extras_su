@@ -107,6 +107,9 @@ static inline char *get_command(const struct su_request *to)
   return DEFAULT_SHELL;
 }
 
+int appops_start_op_su(int uid, const char *pkgName);
+int appops_finish_op_su(int uid, const char *pkgName);
+
 int run_daemon();
 int connect_daemon(int argc, char *argv[], int ppid);
 int su_main(int argc, char *argv[], int need_client);
