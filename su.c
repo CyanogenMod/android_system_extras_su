@@ -34,6 +34,7 @@
 #include <stdarg.h>
 #include <sys/types.h>
 #include <log/log.h>
+#include <private/android_filesystem_config.h>
 
 #include "su.h"
 #include "utils.h"
@@ -42,33 +43,6 @@
 extern int is_daemon;
 extern int daemon_from_uid;
 extern int daemon_from_pid;
-
-unsigned get_shell_uid() {
-  struct passwd* ppwd = getpwnam("shell");
-  if (NULL == ppwd) {
-    return 2000;
-  }
-
-  return ppwd->pw_uid;
-}
-
-unsigned get_system_uid() {
-  struct passwd* ppwd = getpwnam("system");
-  if (NULL == ppwd) {
-    return 1000;
-  }
-
-  return ppwd->pw_uid;
-}
-
-unsigned get_radio_uid() {
-  struct passwd* ppwd = getpwnam("radio");
-  if (NULL == ppwd) {
-    return 1001;
-  }
-
-  return ppwd->pw_uid;
-}
 
 int fork_zero_fucks() {
     int pid = fork();
