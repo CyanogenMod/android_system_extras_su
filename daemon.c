@@ -301,7 +301,7 @@ static int daemon_accept(int fd) {
     ALOGV("remote req pid: %d", daemon_from_pid);
 
     struct ucred credentials;
-    int ucred_length = sizeof(struct ucred);
+    socklen_t ucred_length = sizeof(struct ucred);
     /* fill in the user data structure */
     if(getsockopt(fd, SOL_SOCKET, SO_PEERCRED, &credentials, &ucred_length)) {
         ALOGE("could obtain credentials from unix domain socket");
