@@ -272,20 +272,6 @@ static int run_daemon_child(int infd, int outfd, int errfd, int argc, char** arg
     return su_main(argc, argv, 0);
 }
 
-static int pid_to_exe(int pid, char *exe) {
-    char path[PATH_MAX];
-    int len;
-
-    snprintf(path, sizeof(path), "/proc/%u/exe", pid);
-    len = readlink(path, exe, sizeof(path));
-    if (len < 0) {
-        PLOGE("Getting exe path");
-        return -1;
-    }
-    exe[len] = '\0';
-    return 0;
-}
-
 static int daemon_accept(int fd) {
     char mypath[PATH_MAX], remotepath[PATH_MAX];
     int caller_is_self = 0;
@@ -295,30 +281,18 @@ static int daemon_accept(int fd) {
     ALOGD("remote pid: %d", pid);
     char *pts_slave = read_string(fd);
     ALOGD("remote pts_slave: %s", pts_slave);
-    daemon_from_uid = read_int(fd);
-    ALOGV("remote uid: %d", daemon_from_uid);
     daemon_from_pid = read_int(fd);
     ALOGV("remote req pid: %d", daemon_from_pid);
 
     struct ucred credentials;
     socklen_t ucred_length = sizeof(struct ucred);
     /* fill in the user data structure */
-    if(getsockopt(fd, SOL_SOCKET, SO_PEERCRED, &credentials, &ucred_length)) {
+    if (getsockopt(fd, SOL_SOCKET, SO_PEERCRED, &credentials, &ucred_length)) {
         ALOGE("could obtain credentials from unix domain socket");
         exit(-1);
     }
 
-    if (!pid_to_exe(getpid(),mypath) &&
-            !pid_to_exe(credentials.pid,remotepath)) {
-        if (!strncmp(mypath,remotepath,PATH_MAX)) caller_is_self = 1;
-    }
-    // if the credentials on the other side imply that
-    // we're not calling ourselves, we can't trust anything being sent.
-    if (!caller_is_self) {
-        daemon_from_uid = credentials.uid;
-        pid = credentials.pid;
-        daemon_from_pid = credentials.pid;
-    }
+    daemon_from_uid = credentials.uid;
 
     int mount_storage = read_int(fd);
     // The the FDs for each of the streams
@@ -564,7 +538,6 @@ static void setup_sighandlers(void) {
 }
 
 int connect_daemon(int argc, char *argv[], int ppid) {
-    int uid = getuid();
     int ptmx = -1;
     char pts_slave[PATH_MAX];
 
@@ -619,8 +592,6 @@ int connect_daemon(int argc, char *argv[], int ppid) {
     // Send the slave path to the daemon
     // (This is "" if we're not using PTYs)
     write_string(socketfd, pts_slave);
-    // User ID
-    write_int(socketfd, uid);
     // Parent PID
     write_int(socketfd, ppid);
     write_int(socketfd, mount_storage);
