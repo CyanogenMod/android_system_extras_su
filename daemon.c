@@ -365,9 +365,17 @@ static int daemon_accept(int fd) {
 
     int ptsfd;
     if (pts_slave[0]) {
-        struct stat st;
+        // Opening the TTY has to occur after the
+        // fork() and setsid() so that it becomes
+        // our controlling TTY and not the daemon's
+        ptsfd = open(pts_slave, O_RDWR);
+        if (ptsfd == -1) {
+            PLOGE("open(pts_slave) daemon");
+            exit(-1);
+        }
 
-        if (stat(pts_slave, &st)) {
+        struct stat st;
+        if (fstat(ptsfd, &st)) {
             PLOGE("failed to stat pts_slave");
             exit(-1);
         }
@@ -379,16 +387,6 @@ static int daemon_accept(int fd) {
 
         if (!S_ISCHR(st.st_mode)) {
             PLOGE("proposed PTY isn't a chardev");
-            exit(-1);
-        }
-
-        // Opening the TTY has to occur after the
-        // fork() and setsid() so that it becomes
-        // our controlling TTY and not the daemon's
-        ptsfd = open(pts_slave, O_RDWR);
-
-        if (ptsfd == -1) {
-            PLOGE("open(pts_slave) daemon");
             exit(-1);
         }
 
