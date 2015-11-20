@@ -330,15 +330,6 @@ int access_disabled(const struct su_initiator *from) {
     return 0;
 }
 
-static int get_api_version() {
-  char sdk_ver[PROPERTY_VALUE_MAX];
-  char *data = read_file("/system/build.prop");
-  get_property(data, sdk_ver, "ro.build.version.sdk", "0");
-  int ver = atoi(sdk_ver);
-  free(data);
-  return ver;
-}
-
 static void fork_for_samsung(void)
 {
     // Samsung CONFIG_SEC_RESTRICT_SETUID wants the parent process to have
@@ -485,16 +476,9 @@ int su_main(int argc, char *argv[], int need_client) {
     }
 
     if (need_client) {
-        // attempt to use the daemon client if not root,
-        // or this is api 18 and adb shell (/data is not readable even as root)
-        // or just always use it on API 19+ (ART)
-        if ((geteuid() != AID_ROOT && getuid() != AID_ROOT) ||
-            (get_api_version() >= 18 && getuid() == AID_SHELL) ||
-            get_api_version() >= 19) {
-            // attempt to connect to daemon...
-            ALOGD("starting daemon client %d %d", getuid(), geteuid());
-            return connect_daemon(argc, argv, ppid);
-        }
+        // attempt to connect to daemon...
+        ALOGD("starting daemon client %d %d", getuid(), geteuid());
+        return connect_daemon(argc, argv, ppid);
     }
 
     if (optind < argc && !strcmp(argv[optind], "-")) {
