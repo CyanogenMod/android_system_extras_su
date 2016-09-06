@@ -1,5 +1,8 @@
 # su daemon
 service su_daemon /system/xbin/su --daemon
+    user root
+    group root
+    disabled
     seclabel u:r:sudaemon:s0
 
 on property:persist.sys.root_access=0
