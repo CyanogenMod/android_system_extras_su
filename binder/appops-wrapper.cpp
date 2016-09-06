@@ -5,7 +5,7 @@
 
 using namespace android;
 
-#define APPOPS_OP_SU 68 // This must match the number in AppOpsManager
+#define APPOPS_OP_SU 69 // This must match the number in AppOpsManager
 
 extern "C" {
 
