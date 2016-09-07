@@ -5,15 +5,13 @@
 
 using namespace android;
 
-#define APPOPS_OP_SU 69 // This must match the number in AppOpsManager
-
 extern "C" {
 
 int appops_start_op_su(int uid, const char *pkgName) {
     ALOGD("Checking whether app [uid:%d, pkgName: %s] is allowed to be root", uid, pkgName);
     AppOpsManager *ops = new AppOpsManager();
 
-    int mode = ops->startOp(APPOPS_OP_SU, uid, String16(pkgName));
+    int mode = ops->startOp(AppOpsManager::OP_SU, uid, String16(pkgName));
 
     switch (mode) {
         case AppOpsManager::MODE_ALLOWED:
@@ -30,7 +28,7 @@ int appops_start_op_su(int uid, const char *pkgName) {
 void appops_finish_op_su(int uid, const char *pkgName) {
     ALOGD("Finishing su operation for app [uid:%d, pkgName: %s]", uid, pkgName);
     AppOpsManager *ops = new AppOpsManager();
-    ops->finishOp(APPOPS_OP_SU, uid, String16(pkgName));
+    ops->finishOp(AppOpsManager::OP_SU, uid, String16(pkgName));
     free(ops);
 }
 
