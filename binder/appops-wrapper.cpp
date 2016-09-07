@@ -22,14 +22,14 @@ int appops_start_op_su(int uid, const char *pkgName) {
           return 1;
     }
 
-    free(ops);
+    delete ops;
 }
 
 void appops_finish_op_su(int uid, const char *pkgName) {
     ALOGD("Finishing su operation for app [uid:%d, pkgName: %s]", uid, pkgName);
     AppOpsManager *ops = new AppOpsManager();
     ops->finishOp(AppOpsManager::OP_SU, uid, String16(pkgName));
-    free(ops);
+    delete ops;
 }
 
 }
