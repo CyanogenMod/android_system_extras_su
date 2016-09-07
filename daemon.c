@@ -278,6 +278,7 @@ static int daemon_accept(int fd) {
 
     is_daemon = 1;
     int pid = read_int(fd);
+    int child_result;
     ALOGD("remote pid: %d", pid);
     char *pts_slave = read_string(fd);
     ALOGD("remote pts_slave: %s", pts_slave);
@@ -321,6 +322,11 @@ static int daemon_accept(int fd) {
     // is not affected
     int child = fork();
     if (child < 0) {
+        for (i = 0; i < argc; i++) {
+            free(argv[i]);
+        }
+        free(argv);
+
         // fork failed, send a return code and bail out
         PLOGE("unable to fork");
         write(fd, &child, sizeof(int));
@@ -329,6 +335,11 @@ static int daemon_accept(int fd) {
     }
 
     if (child != 0) {
+        for (i = 0; i < argc; i++) {
+            free(argv[i]);
+        }
+        free(argv);
+
         // In parent, wait for the child to exit, and send the exit code
         // across the wire.
         int status, code;
@@ -421,7 +432,12 @@ error:
         mount_emulated_storage(multiuser_get_user_id(daemon_from_uid));
     }
 
-    return run_daemon_child(infd, outfd, errfd, argc, argv);
+    child_result = run_daemon_child(infd, outfd, errfd, argc, argv);
+    for (i = 0; i < argc; i++) {
+        free(argv[i]);
+    }
+    free(argv);
+    return child_result;
 }
 
 int run_daemon() {
